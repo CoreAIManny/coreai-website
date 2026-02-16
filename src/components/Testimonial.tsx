@@ -8,8 +8,8 @@ export function Testimonial() {
             &ldquo;Truly exceptional — Manny did everything we needed and more.
             Excellent communication throughout and an incredible workflow
             produced in a quick timeframe. It&rsquo;s quite clear Manny has a
-            solid commercial understanding which is imperative to work like this.
-            Definitely my favourite freelancer on here!&rdquo;
+            solid commercial understanding which is imperative to work like
+            this.&rdquo;
           </blockquote>
           <div className="mt-8">
             <p className="font-semibold">Luke Finney</p>

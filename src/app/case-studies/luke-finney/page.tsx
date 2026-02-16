@@ -130,7 +130,7 @@ export default function LukeFinney() {
             Excellent communication throughout and an incredible workflow
             produced in a quick timeframe. It&rsquo;s quite clear Manny has a
             solid commercial understanding which is imperative to work like
-            this. Definitely my favourite freelancer on here!&rdquo;
+            this.&rdquo;
           </blockquote>
           <div className="mt-6">
             <p className="font-semibold">Luke Finney</p>
