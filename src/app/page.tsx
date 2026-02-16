@@ -41,12 +41,14 @@ export default function Home() {
               >
                 Book a 15-min demo →
               </Link>
-              <Link
-                href="#demo"
-                className="rounded-full border border-white/10 bg-white/5 px-8 py-3.5 font-medium text-[--color-muted] transition hover:border-white/20 hover:text-white"
-              >
-                🔊 Hear it handle a real call
-              </Link>
+            </div>
+
+            {/* Voice AI widget — right in the hero */}
+            <div className="mt-14">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[--color-accent]">
+                Try it right now
+              </p>
+              <VapiWidget />
             </div>
           </div>
         </div>
@@ -80,29 +82,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Live demo */}
-      <section id="demo" className="relative overflow-hidden">
-        <GradientLines className="top-0" />
-        <ScrollFade>
-          <div className="mx-auto max-w-3xl px-4 py-24 text-center sm:py-28">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[--color-accent]">
-              Hearing is believing
-            </p>
-            <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-bold tracking-tight sm:text-5xl">
-              Experience the AI receptionist.
-              <br />
-              <span className="text-[--color-muted]">Right now.</span>
-            </h2>
-            <p className="mt-4 text-[--color-muted]">
-              No signup. No sales pitch. Call or chat — you decide.
-            </p>
-            <div className="mt-10">
-              <VapiWidget />
-            </div>
-          </div>
-        </ScrollFade>
       </section>
 
       {/* Problem → Solution */}

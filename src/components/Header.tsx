@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 
 const NAV = [
@@ -55,8 +56,8 @@ export function Header() {
     >
       <div className="rounded-2xl border border-white/10 bg-[#0C0C0C]/70 px-4 py-3 shadow-xl shadow-black/20 backdrop-blur-xl">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-lg font-bold tracking-tight">
-            Core AI
+          <Link href="/" className="flex items-center">
+            <Image src="/logo.png" alt="Core AI Solutions" width={160} height={40} className="h-8 w-auto" priority />
           </Link>
 
           {/* Desktop */}

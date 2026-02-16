@@ -3,10 +3,10 @@
 @theme {
   --color-accent: #3b82f6;
   --color-accent-hover: #2563eb;
-  --color-surface: #131314;
-  --color-surface-light: #1c1c1e;
-  --color-border: #252527;
-  --color-muted: #8a8a8e;
+  --color-surface: #161618;
+  --color-surface-light: #1e1e21;
+  --color-border: #2a2a2e;
+  --color-muted: #9a9a9f;
 }
 
 ::selection {

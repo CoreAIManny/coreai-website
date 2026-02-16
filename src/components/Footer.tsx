@@ -1,12 +1,13 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/5 bg-[#0C0C0C]">
+    <footer className="border-t border-white/5 bg-[#0e0e10]">
       <div className="mx-auto max-w-6xl px-4 py-12">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <h3 className="font-bold">Core AI Solutions</h3>
+            <Image src="/logo.png" alt="Core AI Solutions" width={140} height={35} className="h-7 w-auto mb-2" />
             <p className="mt-2 text-sm text-[--color-muted]">
               AI receptionist and automation systems for UK small businesses.
               London, UK.
