@@ -3,10 +3,10 @@
 @theme {
   --color-accent: #3b82f6;
   --color-accent-hover: #2563eb;
-  --color-surface: #111111;
-  --color-surface-light: #1a1a1a;
-  --color-border: #222222;
-  --color-muted: #888888;
+  --color-surface: #131314;
+  --color-surface-light: #1c1c1e;
+  --color-border: #252527;
+  --color-muted: #8a8a8e;
 }
 
 ::selection {
@@ -16,4 +16,62 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Scroll fade-in animations */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Sound wave animation */
+@keyframes soundwave {
+  0%, 100% { height: 8px; }
+  50% { height: 28px; }
+}
+@keyframes soundwave-lg {
+  0%, 100% { height: 12px; }
+  50% { height: 44px; }
+}
+.sound-bar {
+  width: 3px;
+  border-radius: 3px;
+  background: linear-gradient(to top, var(--color-accent), #818cf8);
+  animation: soundwave 1.2s ease-in-out infinite;
+}
+.sound-bar-lg {
+  width: 4px;
+  border-radius: 4px;
+  background: linear-gradient(to top, var(--color-accent), #818cf8);
+  animation: soundwave-lg 1.2s ease-in-out infinite;
+}
+
+/* Mic pulse */
+@keyframes mic-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
+  50% { box-shadow: 0 0 0 16px rgba(59, 130, 246, 0); }
+}
+.mic-pulse {
+  animation: mic-pulse 2s ease-in-out infinite;
+}
+
+/* Chat messages */
+@keyframes chat-appear {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.chat-msg {
+  animation: chat-appear 0.3s ease-out;
+}
+
+/* Gradient decorative line */
+.gradient-line {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
 }

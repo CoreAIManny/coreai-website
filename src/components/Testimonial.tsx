@@ -1,8 +1,8 @@
 export function Testimonial() {
   return (
-    <section className="border-t border-[--color-border]">
+    <section className="border-t border-white/5">
       <div className="mx-auto max-w-4xl px-4 py-20">
-        <div className="rounded-2xl border border-[--color-border] bg-[--color-surface] p-8 sm:p-12">
+        <div className="rounded-2xl border border-white/5 bg-[--color-surface] p-8 sm:p-12">
           <div className="text-2xl text-yellow-400">★★★★★</div>
           <blockquote className="mt-6 text-lg leading-relaxed text-gray-300 sm:text-xl">
             &ldquo;Truly exceptional — Manny did everything we needed and more.

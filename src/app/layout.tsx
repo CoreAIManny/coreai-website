@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://coreaisolutions.co.uk"),
@@ -75,7 +76,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.className} bg-[#0a0a0a] text-white antialiased`}
+        className={`${inter.variable} ${playfair.variable} font-sans bg-[#0C0C0C] text-white antialiased`}
       >
         <Header />
         <main className="min-h-screen">{children}</main>

@@ -8,9 +8,9 @@ export function CTA({
   sub?: string;
 }) {
   return (
-    <section className="border-t border-[--color-border] bg-[--color-surface]">
+    <section className="border-t border-white/5 bg-[--color-surface]">
       <div className="mx-auto max-w-3xl px-4 py-20 text-center">
-        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+        <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-bold tracking-tight sm:text-4xl">
           {headline}
         </h2>
         <p className="mt-4 text-lg text-[--color-muted]">{sub}</p>
