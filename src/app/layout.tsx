@@ -10,32 +10,34 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfa
 export const metadata: Metadata = {
   metadataBase: new URL("https://coreaisolutions.co.uk"),
   title: {
-    default: "Core AI Solutions — AI Receptionist for UK Businesses",
+    default: "Core AI Solutions — AI Automation for Business Owners",
     template: "%s | Core AI Solutions",
   },
   description:
-    "Stop losing £2,000/month to missed calls. AI receptionist that answers every call, qualifies leads, and books jobs — 24/7. Built for plumbers, estate agents, and home service businesses across the UK.",
+    "AI employees for your business. Voice AI, workflow automation, and done-for-you AI assistants that handle calls, follow up leads, and manage admin — 24/7. ACCA-qualified founder.",
   keywords: [
-    "AI receptionist for plumbers UK",
-    "voice AI for estate agents",
-    "AI phone answering UK",
-    "AI receptionist UK",
-    "automated call handling",
+    "AI automation for business",
+    "AI employee",
+    "voice AI UK",
+    "workflow automation",
+    "n8n automation",
+    "AI assistant for business",
+    "SecondYou",
   ],
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://coreaisolutions.co.uk",
     siteName: "Core AI Solutions",
-    title: "Core AI Solutions — AI Receptionist for UK Businesses",
+    title: "Core AI Solutions — AI Employees for Business Owners",
     description:
-      "Stop losing £2,000/month to missed calls. AI receptionist that answers every call, qualifies leads, and books jobs — 24/7.",
+      "AI automation that saves SMBs time and recovers revenue. Voice AI, workflow automation, and done-for-you AI assistants — 24/7.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Core AI Solutions — AI Receptionist for UK Businesses",
+    title: "Core AI Solutions — AI Employees for Business Owners",
     description:
-      "Stop losing £2,000/month to missed calls. AI receptionist that answers every call 24/7.",
+      "AI automation that saves SMBs time and recovers revenue. Your calls answered. Your leads followed up. 24/7.",
   },
   robots: { index: true, follow: true },
 };
@@ -57,7 +59,7 @@ export default function RootLayout({
               name: "Core AI Solutions",
               url: "https://coreaisolutions.co.uk",
               description:
-                "AI receptionist and automation systems for UK small businesses.",
+                "AI automation and AI employees for UK business owners.",
               founder: {
                 "@type": "Person",
                 name: "Manny Amoah",

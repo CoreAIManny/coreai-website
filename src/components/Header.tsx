@@ -8,18 +8,9 @@ const NAV = [
   {
     label: "Services",
     children: [
-      { label: "AI Receptionist", href: "/services/ai-receptionist" },
-      { label: "Workflow Automation", href: "/services/workflow-automation" },
-      { label: "Implementation", href: "/services/implementation" },
-    ],
-  },
-  { label: "Pricing", href: "/pricing" },
-  {
-    label: "Industries",
-    children: [
-      { label: "Plumbers", href: "/industries/plumbers" },
-      { label: "Estate Agents", href: "/industries/estate-agents" },
-      { label: "Home Services", href: "/industries/home-services" },
+      { label: "Voice AI", href: "/services/ai-receptionist" },
+      { label: "Automation", href: "/services/workflow-automation" },
+      { label: "SecondYou", href: "/secondyou" },
     ],
   },
   { label: "Case Studies", href: "/case-studies" },
@@ -96,10 +87,10 @@ export function Header() {
 
           <div className="hidden items-center gap-3 md:flex">
             <Link
-              href="#demo"
+              href="/pricing"
               className="rounded-lg px-3 py-1.5 text-sm text-[--color-muted] transition hover:text-white"
             >
-              Try AI
+              Pricing
             </Link>
             <Link
               href="/book-demo"

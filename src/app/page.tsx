@@ -26,13 +26,12 @@ export default function Home() {
             </div>
 
             <h1 className="font-[family-name:var(--font-playfair)] text-5xl font-bold tracking-tight sm:text-7xl">
-              Stop losing £2,000/month
+              AI Employees
               <br />
-              <span className="text-[--color-muted]">to missed calls.</span>
+              <span className="text-[--color-muted]">for Your Business</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-[--color-muted] sm:text-xl">
-              Your AI receptionist answers every call, qualifies every lead, and
-              books every job — while you&rsquo;re on-site. 24/7. No staff needed.
+              Your calls answered. Your leads followed up. Your admin handled. 24/7.
             </p>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link
@@ -74,10 +73,10 @@ export default function Home() {
       <section className="border-b border-white/5 bg-[--color-surface]">
         <div className="mx-auto max-w-4xl px-4 py-6 text-center">
           <p className="text-xs uppercase tracking-widest text-[--color-muted]/60">
-            Built for UK businesses
+            AI automation for business owners
           </p>
           <div className="mt-4 flex items-center justify-center gap-8 text-[--color-muted]/30">
-            {["Plumbing", "Property", "Home Services", "Healthcare", "Legal"].map((name) => (
+            {["Sales", "Support", "Operations", "Marketing", "Admin"].map((name) => (
               <span key={name} className="text-sm font-medium tracking-wide">{name}</span>
             ))}
           </div>
@@ -94,13 +93,13 @@ export default function Home() {
                 The problem
               </p>
               <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-2xl font-bold sm:text-3xl">
-                You&rsquo;re missing calls. Losing leads. Working evenings.
+                You&rsquo;re drowning in admin. Missing opportunities. Working late.
               </h2>
               <ul className="mt-6 space-y-4 text-[--color-muted]">
-                <li className="flex gap-3"><span className="text-red-400">✕</span> Phone rings while you&rsquo;re under a boiler</li>
-                <li className="flex gap-3"><span className="text-red-400">✕</span> Voicemails pile up — half never get returned</li>
-                <li className="flex gap-3"><span className="text-red-400">✕</span> Evenings spent calling people back instead of resting</li>
-                <li className="flex gap-3"><span className="text-red-400">✕</span> £200 jobs walking to the competitor who answered first</li>
+                <li className="flex gap-3"><span className="text-red-400">✕</span> Phone rings while you&rsquo;re in a meeting</li>
+                <li className="flex gap-3"><span className="text-red-400">✕</span> Leads slip through the cracks — no follow-up</li>
+                <li className="flex gap-3"><span className="text-red-400">✕</span> Hours wasted on repetitive admin tasks</li>
+                <li className="flex gap-3"><span className="text-red-400">✕</span> Opportunities lost to faster competitors</li>
               </ul>
             </div>
             <div className="rounded-2xl border border-white/5 bg-[--color-surface] p-8 transition hover:border-green-500/20 sm:p-10">
@@ -108,13 +107,13 @@ export default function Home() {
                 The solution
               </p>
               <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-2xl font-bold sm:text-3xl">
-                Your AI answers in 0.5 seconds. Qualifies. Books. Texts you.
+                AI employees handle it all. Automatically. 24/7.
               </h2>
               <ul className="mt-6 space-y-4 text-[--color-muted]">
-                <li className="flex gap-3"><span className="text-green-400">✓</span> Every call answered instantly, 24/7/365</li>
-                <li className="flex gap-3"><span className="text-green-400">✓</span> Asks the right qualifying questions</li>
-                <li className="flex gap-3"><span className="text-green-400">✓</span> Books real leads straight into your calendar</li>
-                <li className="flex gap-3"><span className="text-green-400">✓</span> Texts you the details — you decide if it&rsquo;s worth your time</li>
+                <li className="flex gap-3"><span className="text-green-400">✓</span> Every call answered instantly, every lead captured</li>
+                <li className="flex gap-3"><span className="text-green-400">✓</span> Automatic follow-ups that never forget</li>
+                <li className="flex gap-3"><span className="text-green-400">✓</span> Admin tasks handled while you sleep</li>
+                <li className="flex gap-3"><span className="text-green-400">✓</span> You focus on what matters — growth and strategy</li>
               </ul>
             </div>
           </div>
@@ -173,32 +172,32 @@ export default function Home() {
         </section>
       </ScrollFade>
 
-      {/* Industries */}
+      {/* Use Cases */}
       <ScrollFade>
         <section className="py-24">
           <div className="mx-auto max-w-6xl px-4">
             <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-[--color-accent]">
-              Industries
+              Use Cases
             </p>
             <h2 className="mt-4 text-center font-[family-name:var(--font-playfair)] text-3xl font-bold tracking-tight sm:text-4xl">
-              Built for businesses that live on the phone
+              AI automation for every business function
             </h2>
             <div className="mt-14 grid gap-6 sm:grid-cols-3">
               {[
                 {
-                  title: "Plumbers & Tradespeople",
-                  desc: "Never miss an emergency call-out again. AI qualifies the job, books the slot, texts you the address.",
-                  href: "/industries/plumbers",
+                  title: "Voice AI",
+                  desc: "Answer every call, qualify leads, book appointments. Your AI receptionist never sleeps.",
+                  href: "/services/ai-receptionist",
                 },
                 {
-                  title: "Estate Agents",
-                  desc: "Handle viewing requests, qualify buyers, and book valuations — without hiring another negotiator.",
-                  href: "/industries/estate-agents",
+                  title: "Workflow Automation",
+                  desc: "Connect your tools, automate repetitive tasks, eliminate manual data entry.",
+                  href: "/services/workflow-automation",
                 },
                 {
-                  title: "Home Services",
-                  desc: "Cleaners, electricians, landscapers. If your phone is your lifeline, we automate the front desk.",
-                  href: "/industries/home-services",
+                  title: "SecondYou",
+                  desc: "Your complete AI employee. Done-for-you setup, managed service, white-glove support.",
+                  href: "/secondyou",
                 },
               ].map((item) => (
                 <Link
@@ -240,12 +239,12 @@ export default function Home() {
               </h2>
               <p className="mt-4 leading-relaxed text-[--color-muted]">
                 I&rsquo;m Manny. 15 years in finance at Visa and the UK Cabinet Office.
-                Qualified accountant. I became one to understand how businesses
+                ACCA qualified accountant. I became one to understand how businesses
                 actually work — the numbers, the operations, the bottlenecks.
               </p>
               <p className="mt-4 leading-relaxed text-[--color-muted]">
-                Now I build AI systems that solve the problems I kept seeing:
-                missed calls, manual admin, wasted evenings. You work directly
+                Now I build AI automation systems that solve the problems I kept seeing:
+                missed opportunities, manual admin, inefficient processes. You work directly
                 with me. No juniors, no offshore teams, no runaround.
               </p>
               <Link
@@ -270,8 +269,8 @@ export default function Home() {
               Pricing that pays for itself
             </h2>
             <p className="mt-4 text-[--color-muted]">
-              Miss 5 calls a week at £200 per job? That&rsquo;s £4,000/month lost.
-              Our AI costs a fraction of that.
+              Every missed opportunity costs you. Our AI employees work 24/7 
+              for less than a part-time hire.
             </p>
             <div className="mt-12 grid gap-6 sm:grid-cols-3">
               {[
