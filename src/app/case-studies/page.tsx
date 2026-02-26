@@ -22,7 +22,40 @@ export default function CaseStudies() {
           </p>
         </div>
 
-        <div className="mx-auto mt-16 max-w-3xl">
+        <div className="mx-auto mt-16 max-w-3xl space-y-8">
+          {/* Latest case study - Lead Gen Engine */}
+          <Link
+            href="/case-studies/lead-gen-engine"
+            className="group block rounded-2xl border border-[--color-border] bg-[--color-surface] p-8 transition hover:border-[--color-accent]/50"
+          >
+            <div className="text-2xl text-yellow-400">★★★★★</div>
+            <h2 className="mt-4 text-xl font-bold group-hover:text-[--color-accent]">
+              Lead Generation & Personalisation Engine
+            </h2>
+            <p className="mt-2 text-[--color-muted]">
+              Full-stack lead gen pipeline: 100K+ domains sourced, enriched via
+              waterfall APIs, and AI-personalised at $0.006/lead.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <span className="rounded-full bg-[--color-surface-light] px-3 py-1 text-xs text-[--color-muted]">
+                n8n Automation
+              </span>
+              <span className="rounded-full bg-[--color-surface-light] px-3 py-1 text-xs text-[--color-muted]">
+                Lead Generation
+              </span>
+              <span className="rounded-full bg-[--color-surface-light] px-3 py-1 text-xs text-[--color-muted]">
+                AI Personalisation
+              </span>
+              <span className="rounded-full bg-[--color-surface-light] px-3 py-1 text-xs text-[--color-muted]">
+                Waterfall Enrichment
+              </span>
+            </div>
+            <p className="mt-4 text-sm text-[--color-accent]">
+              Read the full case study →
+            </p>
+          </Link>
+
+          {/* Original case study - Lead Qualification */}
           <Link
             href="/case-studies/luke-finney"
             className="group block rounded-2xl border border-[--color-border] bg-[--color-surface] p-8 transition hover:border-[--color-accent]/50"
