@@ -22,25 +22,30 @@ export default function Home() {
             {/* Trust badge pill */}
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[--color-accent]/30 bg-[--color-accent]/10 px-4 py-1.5 text-sm text-[--color-accent]">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-[--color-accent] animate-pulse" />
-              Now onboarding founding members
+              Free AI & Automation Audits — Limited Slots
             </div>
 
             <h1 className="font-[family-name:var(--font-playfair)] text-5xl font-bold tracking-tight sm:text-7xl">
-              AI Employees
+              Losing £20-50K/Year to Manual Work?
               <br />
-              <span className="text-[--color-muted]">for Your Business</span>
+              <span className="text-[--color-muted]">Get a Free AI Audit.</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-[--color-muted] sm:text-xl">
-              Your calls answered. Your leads followed up. Your admin handled. 24/7.
+              I'll show you exactly where your business is bleeding money — and how to fix it with AI automation. No fluff. No sales pitch. Just ROI.
             </p>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link
                 href="/book-demo"
                 className="rounded-full bg-[--color-accent] px-8 py-3.5 font-medium text-white shadow-lg shadow-[--color-accent]/25 transition hover:bg-[--color-accent-hover] hover:shadow-xl hover:shadow-[--color-accent]/30"
               >
-                Book a 15-min demo →
+                Get Your Free Audit →
               </Link>
             </div>
+
+            {/* Trust signal */}
+            <p className="mt-6 text-sm text-[--color-muted]">
+              Prepared by Manny Amoah, ACCA — Former Visa Europe & UK Cabinet Office
+            </p>
 
             {/* Voice AI widget — right in the hero */}
             <div className="mt-14">
@@ -57,9 +62,9 @@ export default function Home() {
       <section className="border-y border-white/5">
         <div className="mx-auto grid max-w-4xl grid-cols-3 divide-x divide-white/5 px-4 py-6">
           {[
-            { value: "24/7", label: "Coverage" },
-            { value: "0.5s", label: "Answer time" },
-            { value: "£2,000+", label: "Saved per month" },
+            { value: "45 min", label: "Audit call" },
+            { value: "48 hrs", label: "Report delivered" },
+            { value: "£20-50K", label: "Typical savings found" },
           ].map((s) => (
             <div key={s.label} className="text-center">
               <div className="text-xl font-bold text-white sm:text-2xl">{s.value}</div>

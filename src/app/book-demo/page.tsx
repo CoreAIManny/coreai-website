@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Book a Demo",
+  title: "Get Your Free AI Audit",
   description:
-    "Book a free 15-minute demo of our AI receptionist. See exactly how it works for your business. No obligation.",
+    "Book a free 45-minute AI & Automation Audit. I'll show you exactly where your business is losing £20-50K/year. No obligation.",
 };
 
 export default function BookDemo() {
@@ -11,12 +11,10 @@ export default function BookDemo() {
     <section className="mx-auto max-w-4xl px-4 pb-20 pt-24">
       <div className="mx-auto max-w-2xl text-center">
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-          Book your 15-minute demo
+          Get Your Free AI Audit
         </h1>
         <p className="mt-4 text-[--color-muted]">
-          Pick a time that works. I&rsquo;ll show you exactly how an AI
-          receptionist handles calls for your type of business. No obligation, no
-          hard sell.
+          Pick a time that works. I&rsquo;ll show you exactly where your business is bleeding money — and how to fix it with AI automation. 45-minute call, professional report within 48 hours. No obligation, no sales pitch.
         </p>
       </div>
       <div className="mt-12">
