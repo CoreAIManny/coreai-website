@@ -263,6 +263,51 @@ export default function Home() {
         </section>
       </ScrollFade>
 
+      {/* Lead Magnet - AI Audit Framework */}
+      <ScrollFade>
+        <section className="relative overflow-hidden py-24">
+          {/* Background gradient */}
+          <div className="pointer-events-none absolute inset-0">
+            <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[--color-accent]/5 blur-[120px]" />
+          </div>
+          
+          <div className="relative mx-auto max-w-3xl px-4">
+            <div className="rounded-3xl border border-[--color-accent]/30 bg-gradient-to-br from-[--color-surface] to-[--color-accent]/5 p-8 shadow-2xl shadow-[--color-accent]/10 sm:p-12">
+              <div className="text-center">
+                <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[--color-accent]/30 bg-[--color-accent]/10 px-4 py-1.5 text-sm text-[--color-accent]">
+                  <span>📊</span>
+                  <span>Free Resource</span>
+                </div>
+                
+                <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-bold tracking-tight sm:text-4xl">
+                  Free Guide: The AI Audit Framework
+                </h2>
+                
+                <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-[--color-muted]">
+                  How to find £20-50K in hidden costs in any small business. 
+                  Written by an ACCA-qualified automation consultant.
+                </p>
+                
+                <div className="mt-8">
+                  <a
+                    href="https://mannycorea.gumroad.com/l/ai-audit-framework"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block rounded-full bg-[--color-accent] px-10 py-4 text-lg font-semibold text-white shadow-xl shadow-[--color-accent]/30 transition-all duration-300 hover:scale-105 hover:bg-[--color-accent-hover] hover:shadow-2xl hover:shadow-[--color-accent]/40"
+                  >
+                    Get the Free Guide →
+                  </a>
+                </div>
+                
+                <p className="mt-6 text-sm text-[--color-muted]/70">
+                  No spam. Instant download. Actionable insights in under 20 pages.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollFade>
+
       {/* Pricing preview */}
       <ScrollFade>
         <section className="py-24">
