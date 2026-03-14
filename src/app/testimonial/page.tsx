@@ -3,6 +3,10 @@
 import Link from "next/link";
 import { useState } from "react";
 
+// TODO: Paste the deployed Google Apps Script URL here
+// Deploy instructions: see ~/.openclaw/workspace/scripts/testimonial-apps-script.js
+const GOOGLE_SCRIPT_URL = "";
+
 export default function TestimonialPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -17,6 +21,8 @@ export default function TestimonialPage() {
 
   const [submitted, setSubmitted] = useState(false);
   const [copySuccess, setCopySuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showToast, setShowToast] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -51,7 +57,7 @@ ${formData.anythingElse || "N/A"}
     `.trim();
   };
 
-  const handleSubmitEmail = (e: React.FormEvent) => {
+  const handleSubmitEmail = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!formData.name || !formData.business || !formData.aiHelps || !formData.workChanged || !formData.favourite || !formData.recommend || !formData.useOnWebsite) {
@@ -59,6 +65,34 @@ ${formData.anythingElse || "N/A"}
       return;
     }
 
+    setIsSubmitting(true);
+
+    // Try Google Sheets submission first (if URL is configured)
+    if (GOOGLE_SCRIPT_URL) {
+      try {
+        const response = await fetch(GOOGLE_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors', // Apps Script requires no-cors
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+
+        // With no-cors mode, we can't read the response, but if no error is thrown, assume success
+        setIsSubmitting(false);
+        setShowToast(true);
+        setTimeout(() => setShowToast(false), 3000);
+        setSubmitted(true);
+        return;
+      } catch (error) {
+        console.error('Google Sheets submission failed:', error);
+        // Fall through to mailto fallback
+      }
+    }
+
+    // Fallback to mailto (if Google Sheets URL is empty or failed)
+    setIsSubmitting(false);
     const subject = `Testimonial from ${formData.name} - ${formData.business}`;
     const body = encodeURIComponent(formatEmailBody());
     const mailtoLink = `mailto:manny@coreaisolutions.com?subject=${encodeURIComponent(subject)}&body=${body}`;
@@ -271,9 +305,10 @@ ${formData.anythingElse || "N/A"}
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <button
                 type="submit"
-                className="w-full rounded-full bg-[--color-accent] px-8 py-3.5 font-medium text-white transition-colors hover:bg-[--color-accent-hover] sm:w-auto"
+                disabled={isSubmitting}
+                className="w-full rounded-full bg-[--color-accent] px-8 py-3.5 font-medium text-white transition-colors hover:bg-[--color-accent-hover] disabled:opacity-50 disabled:cursor-not-allowed sm:w-auto"
               >
-                Submit via Email
+                {isSubmitting ? "Submitting..." : "Submit Testimonial"}
               </button>
               <button
                 type="button"
@@ -285,6 +320,17 @@ ${formData.anythingElse || "N/A"}
             </div>
           </div>
         </form>
+
+        {/* Success Toast */}
+        {showToast && (
+          <div className="fixed bottom-8 left-1/2 -translate-x-1/2 transform animate-fade-in">
+            <div className="rounded-lg border border-green-500/20 bg-green-500/10 px-6 py-4 backdrop-blur-sm">
+              <p className="flex items-center gap-2 text-green-400 font-medium">
+                <span>✓</span> Testimonial submitted! Thank you 🙏
+              </p>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
