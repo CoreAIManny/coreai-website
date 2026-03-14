@@ -10,7 +10,7 @@ const NAV = [
     children: [
       { label: "Voice AI", href: "/services/ai-receptionist" },
       { label: "Automation", href: "/services/workflow-automation" },
-      { label: "SecondYou", href: "/secondyou" },
+      { label: "HireOnce", href: "/secondyou" },
       { label: "OpenClaw", href: "/openclaw" },
     ],
   },
