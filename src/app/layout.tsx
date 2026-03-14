@@ -57,19 +57,27 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "LocalBusiness",
+              "@type": "ProfessionalService",
               name: "Core AI Solutions",
               url: "https://coreaisolutions.co.uk",
               description:
-                "AI automation and AI employees for UK business owners.",
+                "Free AI audits for UK businesses. ACCA-qualified consultant finds hidden costs, missed revenue, and wasted hours — then deploys AI automation to fix them.",
               founder: {
                 "@type": "Person",
                 name: "Manny Amoah",
+                jobTitle: "ACCA-Qualified AI Automation Consultant",
               },
-              areaServed: {
-                "@type": "Country",
-                name: "United Kingdom",
-              },
+              serviceType: ["AI Audit", "AI Automation", "OpenClaw Deployment", "Workflow Automation", "Voice AI"],
+              areaServed: [
+                { "@type": "Country", "name": "United Kingdom" },
+                { "@type": "Country", "name": "United States" },
+              ],
+              priceRange: "£297-£997",
+              sameAs: [
+                "https://www.linkedin.com/in/manny-amoah",
+                "https://twitter.com/mannyamoah_",
+                "https://www.youtube.com/@mannyamoah"
+              ],
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "London",

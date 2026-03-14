@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CTA } from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "SecondYou — Your AI Employee",
+  title: "HireOnce — Your AI Employee",
   description:
     "A done-for-you AI employee that handles your calls, follows up leads, manages admin, and works 24/7 on WhatsApp. From £197/month.",
 };
@@ -81,17 +81,17 @@ const TASKS = [
   { icon: "💬", title: "Handle enquiries", desc: "Answers FAQs on WhatsApp 24/7. Escalates to you when needed." },
 ];
 
-export default function SecondYou() {
+export default function HireOnce() {
   return (
     <>
       {/* Hero */}
       <section className="mx-auto max-w-6xl px-4 pb-20 pt-28">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-sm font-medium uppercase tracking-wider text-[--color-accent]">
-            SecondYou
+            HireOnce
           </p>
           <h1 className="mt-4 font-[family-name:var(--font-playfair)] text-4xl font-bold tracking-tight sm:text-6xl">
-            Meet SecondYou.
+            Meet HireOnce.
             <br />
             <span className="text-[--color-muted]">Your AI Employee.</span>
           </h1>
@@ -246,7 +246,7 @@ export default function SecondYou() {
 
       <CTA
         headline="Ready to meet your AI employee?"
-        sub="Book a 15-minute call. We'll show you exactly what SecondYou can handle for your business."
+        sub="Book a 15-minute call. We'll show you exactly what HireOnce can handle for your business."
       />
     </>
   );
