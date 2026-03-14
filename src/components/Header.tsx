@@ -11,6 +11,7 @@ const NAV = [
       { label: "Voice AI", href: "/services/ai-receptionist" },
       { label: "Automation", href: "/services/workflow-automation" },
       { label: "SecondYou", href: "/secondyou" },
+      { label: "OpenClaw", href: "/openclaw" },
     ],
   },
   { label: "Case Studies", href: "/case-studies" },
