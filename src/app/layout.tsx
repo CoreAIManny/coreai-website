@@ -10,34 +10,36 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfa
 export const metadata: Metadata = {
   metadataBase: new URL("https://coreaisolutions.co.uk"),
   title: {
-    default: "Core AI Solutions — AI Automation for Business Owners",
+    default: "Core AI Solutions — Free AI Audit | Find Hidden Costs in Your Business",
     template: "%s | Core AI Solutions",
   },
   description:
-    "AI employees for your business. Voice AI, workflow automation, and done-for-you AI assistants that handle calls, follow up leads, and manage admin — 24/7. ACCA-qualified founder.",
+    "Free AI audit for UK businesses. We find the hidden costs, missed revenue, and wasted hours in your operations — then show you exactly how AI fixes them. ACCA-qualified consultant.",
   keywords: [
-    "AI automation for business",
+    "AI audit for business",
+    "AI automation UK",
+    "free AI audit",
+    "business efficiency audit",
     "AI employee",
-    "voice AI UK",
     "workflow automation",
     "n8n automation",
-    "AI assistant for business",
-    "SecondYou",
+    "OpenClaw deployment",
+    "HireOnce",
   ],
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: "https://coreaisolutions.co.uk",
     siteName: "Core AI Solutions",
-    title: "Core AI Solutions — AI Employees for Business Owners",
+    title: "Core AI Solutions — Free AI Audit | Find Hidden Costs in Your Business",
     description:
-      "AI automation that saves SMBs time and recovers revenue. Voice AI, workflow automation, and done-for-you AI assistants — 24/7.",
+      "Free AI audit that uncovers hidden costs and missed revenue in your business. ACCA-qualified consultant shows you exactly where AI saves you money.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Core AI Solutions — AI Employees for Business Owners",
+    title: "Core AI Solutions — Free AI Audit | Find Hidden Costs in Your Business",
     description:
-      "AI automation that saves SMBs time and recovers revenue. Your calls answered. Your leads followed up. 24/7.",
+      "Free AI audit that uncovers hidden costs and missed revenue. Your business is leaking money — we show you where and how AI fixes it.",
   },
   robots: { index: true, follow: true },
 };
