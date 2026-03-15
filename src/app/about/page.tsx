@@ -15,10 +15,10 @@ export default function AboutPage() {
       <section className="relative overflow-hidden bg-white pt-32">
         <div className="mx-auto max-w-4xl px-4 pb-16">
           <div className="text-center">
-            <h1 className="font-bold text-5xl tracking-tight text-[--color-primary] sm:text-6xl">
+            <h1 className="font-bold text-5xl tracking-tight text-primary sm:text-6xl">
               Built by an Accountant. Not a Coder.
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-[--color-muted] sm:text-xl">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted sm:text-xl">
               Most AI consultants are coders who learned business. I&rsquo;m an ACCA-qualified accountant who learned AI.
             </p>
           </div>
@@ -27,7 +27,7 @@ export default function AboutPage() {
 
       {/* Founder Story */}
       <ScrollFade>
-        <section className="py-24 bg-[--color-surface]">
+        <section className="py-24 bg-surface">
           <div className="mx-auto max-w-6xl px-4">
             <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
               <div className="flex justify-center lg:justify-start">
@@ -40,19 +40,19 @@ export default function AboutPage() {
                 />
               </div>
               <div>
-                <h2 className="font-bold text-3xl text-[--color-primary] sm:text-4xl">
+                <h2 className="font-bold text-3xl text-primary sm:text-4xl">
                   Manny Amoah, ACCA
                 </h2>
-                <p className="mt-4 text-[--color-text] leading-relaxed">
+                <p className="mt-4 text-text leading-relaxed">
                   I spent 15 years in the financial guts of major organisations — Visa Europe, UK Cabinet Office, 
                   UK Health Security Agency. I&rsquo;ve seen how businesses actually work: the numbers, 
                   the operations, the bottlenecks that cost millions.
                 </p>
-                <p className="mt-4 text-[--color-text] leading-relaxed">
+                <p className="mt-4 text-text leading-relaxed">
                   My ACCA qualification taught me to think in P&L terms. Every process has a cost. 
                   Every inefficiency bleeds money. Every automation needs ROI justification.
                 </p>
-                <p className="mt-4 text-[--color-text] leading-relaxed">
+                <p className="mt-4 text-text leading-relaxed">
                   Now I help small businesses plug the same revenue leaks that cost corporates millions. 
                   I don&rsquo;t sell you tech — I show you the ROI first, then build the system that delivers it.
                 </p>
@@ -65,10 +65,10 @@ export default function AboutPage() {
                     { label: "Approach", value: "ROI before tech" },
                   ].map((item) => (
                     <div key={item.label} className="rounded-lg border border-gray-200 bg-white p-4">
-                      <p className="text-xs font-semibold uppercase tracking-wider text-[--color-muted]">
+                      <p className="text-xs font-semibold uppercase tracking-wider text-muted">
                         {item.label}
                       </p>
-                      <p className="mt-1 font-semibold text-[--color-primary]">{item.value}</p>
+                      <p className="mt-1 font-semibold text-primary">{item.value}</p>
                     </div>
                   ))}
                 </div>
@@ -82,10 +82,10 @@ export default function AboutPage() {
       <ScrollFade>
         <section className="py-24 bg-white">
           <div className="mx-auto max-w-6xl px-4">
-            <h2 className="text-center font-bold text-3xl text-[--color-primary] sm:text-4xl">
+            <h2 className="text-center font-bold text-3xl text-primary sm:text-4xl">
               Why ACCA Makes the Difference
             </h2>
-            <p className="mt-6 text-center text-lg text-[--color-muted]">
+            <p className="mt-6 text-center text-lg text-muted">
               Most AI consultants show you what&rsquo;s possible. I show you what&rsquo;s profitable.
             </p>
             
@@ -109,11 +109,11 @@ export default function AboutPage() {
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-2xl border border-gray-200 bg-[--color-surface] p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[--color-accent]/30 hover:shadow-lg"
+                  className="rounded-2xl border border-gray-200 bg-surface p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-lg"
                 >
                   <div className="text-4xl">{item.icon}</div>
-                  <h3 className="mt-4 font-bold text-xl text-[--color-primary]">{item.title}</h3>
-                  <p className="mt-3 text-sm text-[--color-muted] leading-relaxed">{item.desc}</p>
+                  <h3 className="mt-4 font-bold text-xl text-primary">{item.title}</h3>
+                  <p className="mt-3 text-sm text-muted leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -123,9 +123,9 @@ export default function AboutPage() {
 
       {/* Career Journey */}
       <ScrollFade>
-        <section className="py-24 bg-[--color-surface]">
+        <section className="py-24 bg-surface">
           <div className="mx-auto max-w-4xl px-4">
-            <h2 className="text-center font-bold text-3xl text-[--color-primary] sm:text-4xl">
+            <h2 className="text-center font-bold text-3xl text-primary sm:text-4xl">
               From Corporate Finance to AI Consulting
             </h2>
             <div className="mt-14 space-y-8">
@@ -158,12 +158,12 @@ export default function AboutPage() {
                 <div key={job.period} className="rounded-2xl border border-gray-200 bg-white p-6">
                   <div className="grid gap-4 lg:grid-cols-3">
                     <div>
-                      <p className="font-bold text-[--color-primary]">{job.period}</p>
-                      <p className="text-sm text-[--color-accent] font-semibold">{job.company}</p>
-                      <p className="text-sm text-[--color-muted]">{job.role}</p>
+                      <p className="font-bold text-primary">{job.period}</p>
+                      <p className="text-sm text-accent font-semibold">{job.company}</p>
+                      <p className="text-sm text-muted">{job.role}</p>
                     </div>
                     <div className="lg:col-span-2">
-                      <p className="text-sm text-[--color-text] leading-relaxed">{job.impact}</p>
+                      <p className="text-sm text-text leading-relaxed">{job.impact}</p>
                     </div>
                   </div>
                 </div>
@@ -177,10 +177,10 @@ export default function AboutPage() {
       <ScrollFade>
         <section className="py-24 bg-white">
           <div className="mx-auto max-w-6xl px-4">
-            <h2 className="text-center font-bold text-3xl text-[--color-primary] sm:text-4xl">
+            <h2 className="text-center font-bold text-3xl text-primary sm:text-4xl">
               Industry-Agnostic Expertise
             </h2>
-            <p className="mt-6 text-center text-lg text-[--color-muted]">
+            <p className="mt-6 text-center text-lg text-muted">
               I niche on the product (Revenue Recovery Audits), not the market. Revenue leaks happen everywhere.
             </p>
             
@@ -213,11 +213,11 @@ export default function AboutPage() {
               ].map((example) => (
                 <div
                   key={example.client}
-                  className="rounded-2xl border border-gray-200 bg-[--color-surface] p-6 text-center"
+                  className="rounded-2xl border border-gray-200 bg-surface p-6 text-center"
                 >
-                  <h3 className="font-bold text-lg text-[--color-primary]">{example.client}</h3>
-                  <p className="mt-1 text-sm font-medium text-[--color-accent]">{example.industry}</p>
-                  <p className="text-xs text-[--color-muted]">{example.location}</p>
+                  <h3 className="font-bold text-lg text-primary">{example.client}</h3>
+                  <p className="mt-1 text-sm font-medium text-accent">{example.industry}</p>
+                  <p className="text-xs text-muted">{example.location}</p>
                   <div className="mt-4 rounded-lg border border-red-200 bg-red-50 p-3">
                     <p className="text-xs text-red-700">{example.leak}</p>
                   </div>
@@ -226,9 +226,9 @@ export default function AboutPage() {
             </div>
             
             <div className="mt-12 text-center">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[--color-accent]/30 bg-[--color-accent]/10 px-6 py-3">
+              <div className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-6 py-3">
                 <span className="text-2xl">🎯</span>
-                <span className="font-semibold text-[--color-accent]">
+                <span className="font-semibold text-accent">
                   Same audit framework. Different industries. Same results.
                 </span>
               </div>
@@ -239,9 +239,9 @@ export default function AboutPage() {
 
       {/* How I Work */}
       <ScrollFade>
-        <section className="py-24 bg-[--color-surface]">
+        <section className="py-24 bg-surface">
           <div className="mx-auto max-w-4xl px-4">
-            <h2 className="text-center font-bold text-3xl text-[--color-primary] sm:text-4xl">
+            <h2 className="text-center font-bold text-3xl text-primary sm:text-4xl">
               How I Work
             </h2>
             <div className="mt-14 space-y-8">
@@ -268,12 +268,12 @@ export default function AboutPage() {
                 },
               ].map((item) => (
                 <div key={item.step} className="flex gap-6">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[--color-accent] text-lg font-bold text-white">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent text-lg font-bold text-white">
                     {item.step}
                   </div>
                   <div>
-                    <h3 className="font-bold text-xl text-[--color-primary]">{item.title}</h3>
-                    <p className="mt-2 text-[--color-text] leading-relaxed">{item.desc}</p>
+                    <h3 className="font-bold text-xl text-primary">{item.title}</h3>
+                    <p className="mt-2 text-text leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -286,15 +286,15 @@ export default function AboutPage() {
       <ScrollFade>
         <section className="py-24 bg-white">
           <div className="mx-auto max-w-4xl px-4 text-center">
-            <h2 className="font-bold text-3xl text-[--color-primary] sm:text-4xl">
+            <h2 className="font-bold text-3xl text-primary sm:text-4xl">
               My Mission
             </h2>
-            <div className="mt-12 rounded-3xl border border-[--color-accent]/30 bg-gradient-to-br from-[--color-accent]/5 to-white p-8 sm:p-12">
-              <blockquote className="text-xl leading-relaxed text-[--color-text] sm:text-2xl">
+            <div className="mt-12 rounded-3xl border border-accent/30 bg-gradient-to-br from-accent/5 to-white p-8 sm:p-12">
+              <blockquote className="text-xl leading-relaxed text-text sm:text-2xl">
                 &ldquo;To democratise enterprise-level operational efficiency. Every small business 
                 should have access to the same automation advantages that big corporations take for granted.&rdquo;
               </blockquote>
-              <p className="mt-6 font-semibold text-[--color-primary]">— Manny Amoah, ACCA</p>
+              <p className="mt-6 font-semibold text-primary">— Manny Amoah, ACCA</p>
             </div>
           </div>
         </section>
@@ -302,25 +302,25 @@ export default function AboutPage() {
 
       {/* CTA */}
       <ScrollFade>
-        <section className="py-24 bg-[--color-surface]">
+        <section className="py-24 bg-surface">
           <div className="mx-auto max-w-4xl px-4 text-center">
-            <h2 className="font-bold text-3xl text-[--color-primary] sm:text-4xl">
+            <h2 className="font-bold text-3xl text-primary sm:text-4xl">
               Ready to Find Your Revenue Leaks?
             </h2>
-            <p className="mt-6 text-lg text-[--color-muted]">
+            <p className="mt-6 text-lg text-muted">
               Let&rsquo;s apply ACCA-grade analysis to your business operations. Find out exactly where you&rsquo;re losing money.
             </p>
             
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link
                 href="/audit"
-                className="rounded-full bg-[--color-accent] px-8 py-3.5 font-medium text-white shadow-lg shadow-[--color-accent]/25 transition hover:bg-[--color-accent-hover]"
+                className="rounded-full bg-accent px-8 py-3.5 font-medium text-white shadow-lg shadow-accent/25 transition hover:bg-accent-hover"
               >
                 Get Free AI Readiness Audit →
               </Link>
               <Link
                 href="/revenue-recovery"
-                className="rounded-full border border-[--color-primary] bg-[--color-primary] px-8 py-3.5 font-medium text-white shadow-lg transition hover:bg-[--color-primary]/90"
+                className="rounded-full border border-primary bg-primary px-8 py-3.5 font-medium text-white shadow-lg transition hover:bg-primary/90"
               >
                 Book Revenue Recovery Audit — £297 →
               </Link>

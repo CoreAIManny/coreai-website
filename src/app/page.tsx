@@ -11,51 +11,52 @@ export default function Home() {
       <section className="relative overflow-hidden bg-white">
         {/* Background gradient swoosh */}
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -right-1/4 -top-1/4 h-[600px] w-[600px] rounded-full bg-[--color-accent]/8 blur-[120px]" />
-          <div className="absolute -left-1/4 top-1/4 h-[400px] w-[400px] rounded-full bg-[--color-primary]/5 blur-[100px]" />
+          <div className="absolute -right-1/4 -top-1/4 h-[600px] w-[600px] rounded-full bg-accent/8 blur-[120px]" />
+          <div className="absolute -left-1/4 top-1/4 h-[400px] w-[400px] rounded-full bg-primary/5 blur-[100px]" />
         </div>
 
         <div className="mx-auto max-w-6xl px-4 pb-16 pt-32 sm:pt-40">
           <div className="mx-auto max-w-4xl text-center">
             {/* Trust badge pill */}
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[--color-accent]/30 bg-[--color-accent]/10 px-4 py-1.5 text-sm text-[--color-accent]">
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-[--color-accent] animate-pulse" />
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 text-sm text-accent">
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
               Free AI Readiness Audit Available
             </div>
 
-            <h1 className="font-bold text-5xl tracking-tight text-[--color-primary] sm:text-7xl">
-              Stop Losing Revenue to Missed Calls, Dead Leads & Manual Admin.
+            <h1 className="font-bold text-5xl tracking-tight text-primary sm:text-7xl">
+              Stop Losing Revenue to <span className="text-accent">Missed Calls</span>, Dead Leads & Manual Admin.
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-[--color-muted] sm:text-xl">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted sm:text-xl">
               Find out exactly where your business is bleeding money — and how AI can plug the leaks. ACCA-grade analysis with exact £ figures.
             </p>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link
                 href="/audit"
-                className="rounded-full bg-[--color-accent] px-8 py-3.5 font-medium text-white shadow-lg shadow-[--color-accent]/25 transition hover:bg-[--color-accent-hover] hover:shadow-xl hover:shadow-[--color-accent]/30"
+                className="rounded-full bg-accent px-8 py-3.5 font-medium text-white shadow-lg shadow-accent/25 transition hover:bg-accent-hover hover:shadow-xl hover:shadow-accent/30"
               >
                 Get Your Free AI Readiness Score →
               </Link>
               <Link
                 href="/revenue-recovery"
-                className="rounded-full border border-[--color-primary] bg-[--color-primary] px-8 py-3.5 font-medium text-white shadow-lg transition hover:bg-[--color-primary]/90"
+                className="rounded-full border border-primary bg-primary px-8 py-3.5 font-medium text-white shadow-lg transition hover:bg-primary/90"
               >
                 Book Revenue Recovery Audit — £297 →
               </Link>
             </div>
 
             {/* Trust signal */}
-            <div className="mt-8 flex items-center justify-center gap-6 text-sm text-[--color-muted]">
-              <span>✓ ACCA-Qualified</span>
-              <span>✓ 4 Businesses Deployed</span>
-              <span>✓ 3 Countries</span>
+            <div className="mt-8 flex items-center justify-center gap-6 text-sm text-muted">
+              <span className="flex items-center gap-1"><span className="text-accent">✓</span> ACCA-Qualified</span>
+              <span className="flex items-center gap-1"><span className="text-accent">✓</span> 4 Businesses Deployed</span>
+              <span className="flex items-center gap-1"><span className="text-accent">✓</span> 3 Countries</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Stats bar */}
-      <section className="border-y border-gray-200 bg-[--color-surface]">
+      <section className="border-y border-gray-200 bg-surface relative">
+        <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent" />
         <div className="mx-auto grid max-w-4xl grid-cols-3 divide-x divide-gray-200 px-4 py-6">
           {[
             { value: "4 Businesses", label: "Deployed" },
@@ -63,8 +64,8 @@ export default function Home() {
             { value: "ACCA", label: "Qualified" },
           ].map((s) => (
             <div key={s.label} className="text-center">
-              <div className="text-xl font-bold text-[--color-primary] sm:text-2xl">{s.value}</div>
-              <div className="mt-1 text-xs text-[--color-muted] sm:text-sm">{s.label}</div>
+              <div className="text-xl font-bold text-primary sm:text-2xl">{s.value}</div>
+              <div className="mt-1 text-xs text-muted sm:text-sm">{s.label}</div>
             </div>
           ))}
         </div>
@@ -78,10 +79,10 @@ export default function Home() {
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-red-600">
                 The problem
               </p>
-              <h2 className="mt-4 font-bold text-2xl text-[--color-primary] sm:text-3xl">
+              <h2 className="mt-4 font-bold text-2xl text-primary sm:text-3xl">
                 Your business is bleeding money right now.
               </h2>
-              <ul className="mt-6 space-y-4 text-[--color-text]">
+              <ul className="mt-6 space-y-4 text-text">
                 <li className="flex gap-3"><span className="text-red-500">✕</span> Phone rings, nobody answers</li>
                 <li className="flex gap-3"><span className="text-red-500">✕</span> Leads go cold — no follow-up</li>
                 <li className="flex gap-3"><span className="text-red-500">✕</span> Hours lost to repetitive admin</li>
@@ -92,10 +93,10 @@ export default function Home() {
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-green-600">
                 The solution
               </p>
-              <h2 className="mt-4 font-bold text-2xl text-[--color-primary] sm:text-3xl">
+              <h2 className="mt-4 font-bold text-2xl text-primary sm:text-3xl">
                 AI plugs the leaks. Automatically. 24/7.
               </h2>
-              <ul className="mt-6 space-y-4 text-[--color-text]">
+              <ul className="mt-6 space-y-4 text-text">
                 <li className="flex gap-3"><span className="text-green-500">✓</span> AI answers every call, 24/7</li>
                 <li className="flex gap-3"><span className="text-green-500">✓</span> Automated follow-up in minutes</li>
                 <li className="flex gap-3"><span className="text-green-500">✓</span> AI handles admin while you sleep</li>
@@ -108,12 +109,12 @@ export default function Home() {
 
       {/* CORE Method */}
       <ScrollFade>
-        <section className="py-24 bg-[--color-surface]">
+        <section className="py-24 bg-surface">
           <div className="mx-auto max-w-6xl px-4">
-            <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-[--color-accent]">
+            <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-accent">
               How We Fix It
             </p>
-            <h2 className="mt-4 text-center font-bold text-3xl tracking-tight text-[--color-primary] sm:text-5xl">
+            <h2 className="mt-4 text-center font-bold text-3xl tracking-tight text-primary sm:text-5xl">
               The C.O.R.E. Method
             </h2>
             <div className="mt-14 grid gap-6 sm:grid-cols-4">
@@ -141,13 +142,13 @@ export default function Home() {
               ].map((item) => (
                 <div
                   key={item.letter}
-                  className="group rounded-2xl border border-gray-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[--color-accent]/30 hover:shadow-lg hover:shadow-[--color-accent]/5 sm:p-10"
+                  className="group rounded-2xl border border-gray-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5 sm:p-10"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[--color-accent]/10 text-lg font-bold text-[--color-accent] transition group-hover:bg-[--color-accent] group-hover:text-white">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 text-lg font-bold text-accent transition group-hover:bg-accent group-hover:text-white">
                     {item.letter}
                   </div>
-                  <h3 className="mt-5 text-lg font-semibold text-[--color-primary]">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-[--color-muted]">{item.desc}</p>
+                  <h3 className="mt-5 text-lg font-semibold text-primary">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -159,23 +160,23 @@ export default function Home() {
       <ScrollFade>
         <section className="py-24 bg-white">
           <div className="mx-auto max-w-6xl px-4">
-            <h2 className="text-center font-bold text-3xl tracking-tight text-[--color-primary] sm:text-4xl">
+            <h2 className="text-center font-bold text-3xl tracking-tight text-primary sm:text-4xl">
               Two Ways to Find Your Revenue Leaks
             </h2>
             <div className="mt-14 grid gap-8 lg:grid-cols-2">
               {/* Free Path */}
-              <div className="rounded-3xl border border-[--color-accent]/30 bg-gradient-to-br from-[--color-accent]/5 to-white p-8 shadow-lg sm:p-12">
+              <div className="rounded-3xl border border-accent/30 bg-gradient-to-br from-accent/5 to-white p-8 shadow-lg sm:p-12">
                 <div className="text-center">
-                  <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[--color-accent]/30 bg-[--color-accent]/10 px-4 py-1.5 text-sm text-[--color-accent]">
+                  <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 text-sm text-accent">
                     <span>🆓</span>
                     <span>Not Sure Where to Start?</span>
                   </div>
                   
-                  <h3 className="font-bold text-2xl text-[--color-primary] tracking-tight">
+                  <h3 className="font-bold text-2xl text-primary tracking-tight">
                     Free AI Readiness Audit
                   </h3>
                   
-                  <ul className="mx-auto mt-4 max-w-xs space-y-2 text-left text-sm text-[--color-text]">
+                  <ul className="mx-auto mt-4 max-w-xs space-y-2 text-left text-sm text-text">
                     <li>• 10-minute online assessment</li>
                     <li>• Auto-generated readiness score</li>
                     <li>• 3 quick wins you can do today</li>
@@ -185,7 +186,7 @@ export default function Home() {
                   <div className="mt-6">
                     <Link
                       href="/audit"
-                      className="inline-block rounded-full bg-[--color-accent] px-8 py-3 font-semibold text-white shadow-lg shadow-[--color-accent]/30 transition-all duration-300 hover:scale-105 hover:bg-[--color-accent-hover] hover:shadow-xl hover:shadow-[--color-accent]/40"
+                      className="inline-block rounded-full bg-accent px-8 py-3 font-semibold text-white shadow-lg shadow-accent/30 transition-all duration-300 hover:scale-105 hover:bg-accent-hover hover:shadow-xl hover:shadow-accent/40"
                     >
                       Take the Free Audit →
                     </Link>
@@ -194,18 +195,18 @@ export default function Home() {
               </div>
 
               {/* Paid Path */}
-              <div className="rounded-3xl border border-[--color-primary]/30 bg-gradient-to-br from-[--color-primary]/5 to-white p-8 shadow-lg sm:p-12">
+              <div className="rounded-3xl border border-primary/30 bg-gradient-to-br from-primary/5 to-white p-8 shadow-lg sm:p-12">
                 <div className="text-center">
-                  <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[--color-primary]/30 bg-[--color-primary]/10 px-4 py-1.5 text-sm text-[--color-primary]">
+                  <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm text-primary">
                     <span>💰</span>
                     <span>Know You&rsquo;re Losing Money?</span>
                   </div>
                   
-                  <h3 className="font-bold text-2xl text-[--color-primary] tracking-tight">
+                  <h3 className="font-bold text-2xl text-primary tracking-tight">
                     Revenue Recovery Audit
                   </h3>
                   
-                  <ul className="mx-auto mt-4 max-w-xs space-y-2 text-left text-sm text-[--color-text]">
+                  <ul className="mx-auto mt-4 max-w-xs space-y-2 text-left text-sm text-text">
                     <li>• 60-90 min deep dive with Manny</li>
                     <li>• ACCA-grade P&L analysis</li>
                     <li>• Exact £ figures on every leak</li>
@@ -215,7 +216,7 @@ export default function Home() {
                   <div className="mt-6">
                     <Link
                       href="/revenue-recovery"
-                      className="inline-block rounded-full bg-[--color-primary] px-8 py-3 font-semibold text-white shadow-lg shadow-[--color-primary]/30 transition-all duration-300 hover:scale-105 hover:bg-[--color-primary]/90 hover:shadow-xl hover:shadow-[--color-primary]/40"
+                      className="inline-block rounded-full bg-primary px-8 py-3 font-semibold text-white shadow-lg shadow-primary/30 transition-all duration-300 hover:scale-105 hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/40"
                     >
                       Book for £297 →
                     </Link>
@@ -229,15 +230,15 @@ export default function Home() {
 
       {/* Audit Results - Proof Stack */}
       <ScrollFade>
-        <section className="py-24 bg-[--color-surface]">
+        <section className="py-24 bg-surface">
           <div className="mx-auto max-w-6xl px-4">
-            <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-[--color-accent]">
+            <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-accent">
               Proof
             </p>
-            <h2 className="mt-4 text-center font-bold text-3xl tracking-tight text-[--color-primary] sm:text-4xl">
+            <h2 className="mt-4 text-center font-bold text-3xl tracking-tight text-primary sm:text-4xl">
               What We&rsquo;ve Found & Fixed
             </h2>
-            <p className="mt-4 text-center text-[--color-muted]">
+            <p className="mt-4 text-center text-muted">
               4 Businesses. 4 Industries. 3 Countries.
             </p>
             <div className="mt-14 grid gap-6 sm:grid-cols-2">
@@ -269,24 +270,24 @@ export default function Home() {
               ].map((item) => (
                 <div
                   key={item.name}
-                  className="group rounded-2xl border border-gray-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[--color-accent]/30 hover:shadow-lg hover:shadow-[--color-accent]/5"
+                  className="group rounded-2xl border border-gray-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5"
                 >
-                  <h3 className="font-semibold text-lg text-[--color-primary]">{item.name}</h3>
+                  <h3 className="font-semibold text-lg text-primary">{item.name}</h3>
                   
                   <div className="mt-4 space-y-3 text-sm">
                     <div>
                       <span className="font-medium text-red-600">AUDIT FOUND:</span>
-                      <p className="mt-1 text-[--color-text]">{item.audit}</p>
+                      <p className="mt-1 text-text">{item.audit}</p>
                     </div>
                     
                     <div>
                       <span className="font-medium text-blue-600">WE DEPLOYED:</span>
-                      <p className="mt-1 text-[--color-text]">{item.deployed}</p>
+                      <p className="mt-1 text-text">{item.deployed}</p>
                     </div>
                     
                     <div>
                       <span className="font-medium text-green-600">RESULT:</span>
-                      <p className="mt-1 text-[--color-text]">{item.result}</p>
+                      <p className="mt-1 text-text">{item.result}</p>
                     </div>
                   </div>
                 </div>
@@ -295,7 +296,7 @@ export default function Home() {
             <div className="mt-12 text-center">
               <Link
                 href="/proof"
-                className="rounded-full bg-[--color-accent] px-6 py-3 font-medium text-white shadow-lg shadow-[--color-accent]/25 transition hover:bg-[--color-accent-hover]"
+                className="rounded-full bg-accent px-6 py-3 font-medium text-white shadow-lg shadow-accent/25 transition hover:bg-accent-hover"
               >
                 See Full Audit Results →
               </Link>
@@ -318,27 +319,27 @@ export default function Home() {
               />
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[--color-accent]">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
                 Built by an Accountant. Not a Coder.
               </p>
-              <h2 className="mt-4 font-bold text-2xl text-[--color-primary] sm:text-3xl">
-                Most AI consultants are coders who learned business. I&rsquo;m an ACCA-qualified accountant who learned AI.
+              <h2 className="mt-4 font-bold text-2xl text-primary sm:text-3xl">
+                Most AI consultants are coders who learned business. I&rsquo;m an <span className="text-accent">ACCA-qualified accountant</span> who learned AI.
               </h2>
-              <p className="mt-4 leading-relaxed text-[--color-text]">
+              <p className="mt-4 leading-relaxed text-text">
                 I don&rsquo;t sell you tech — I show you the ROI first, then build the system that delivers it. 
                 Every automation gets measured in £ recovered or £ saved.
               </p>
-              <p className="mt-4 leading-relaxed text-[--color-text]">
+              <p className="mt-4 leading-relaxed text-text">
                 15 years in finance at Visa Europe and the UK Cabinet Office taught me how businesses 
                 actually work — the numbers, the operations, the bottlenecks. Now I build AI that fixes them.
               </p>
-              <p className="mt-4 font-medium text-[--color-primary]">
+              <p className="mt-4 font-medium text-primary">
                 — Manny Amoah, ACCA<br />
                 Former Visa Europe & UK Cabinet Office
               </p>
               <Link
                 href="/about"
-                className="mt-4 inline-block text-sm font-medium text-[--color-accent] hover:underline"
+                className="mt-4 inline-block text-sm font-medium text-accent hover:underline"
               >
                 Read my full story →
               </Link>
@@ -349,21 +350,21 @@ export default function Home() {
 
       {/* Testimonial */}
       <ScrollFade>
-        <section className="py-24 bg-[--color-surface]">
+        <section className="py-24 bg-surface">
           <div className="mx-auto max-w-4xl px-4">
             <div className="rounded-3xl border border-yellow-200 bg-yellow-50 p-8 text-center sm:p-12">
               <div className="mb-4 flex justify-center text-yellow-500">
                 <span className="text-2xl">★★★★★</span>
               </div>
-              <blockquote className="text-lg leading-relaxed text-[--color-text] sm:text-xl">
+              <blockquote className="text-lg leading-relaxed text-text sm:text-xl">
                 &ldquo;Truly exceptional — Manny did everything we needed and more. 
                 Excellent communication throughout and an incredible workflow produced in a quick timeframe. 
                 It&rsquo;s quite clear Manny has a solid commercial understanding which is imperative to work like this.&rdquo;
               </blockquote>
               <div className="mt-6">
-                <p className="font-semibold text-[--color-primary]">Luke Finney</p>
-                <p className="text-sm text-[--color-muted]">Founder & CEO, Manchester UK</p>
-                <p className="mt-2 text-xs text-[--color-muted]">
+                <p className="font-semibold text-primary">Luke Finney</p>
+                <p className="text-sm text-muted">Founder & CEO, Manchester UK</p>
+                <p className="mt-2 text-xs text-muted">
                   ✅ Verified on Upwork · $101K+ spent · 4.9★
                 </p>
               </div>
@@ -377,30 +378,30 @@ export default function Home() {
         <section className="relative overflow-hidden py-24 bg-white">
           {/* Background gradient */}
           <div className="pointer-events-none absolute inset-0">
-            <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[--color-accent]/5 blur-[120px]" />
+            <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/5 blur-[120px]" />
           </div>
           
           <div className="relative mx-auto max-w-4xl px-4 text-center">
-            <h2 className="font-bold text-3xl tracking-tight text-[--color-primary] sm:text-4xl">
+            <h2 className="font-bold text-3xl tracking-tight text-primary sm:text-4xl">
               Ready to Find Your Revenue Leaks?
             </h2>
             
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link
                 href="/audit"
-                className="rounded-full bg-[--color-accent] px-8 py-3.5 font-medium text-white shadow-lg shadow-[--color-accent]/25 transition hover:bg-[--color-accent-hover] hover:shadow-xl hover:shadow-[--color-accent]/30"
+                className="rounded-full bg-accent px-8 py-3.5 font-medium text-white shadow-lg shadow-accent/25 transition hover:bg-accent-hover hover:shadow-xl hover:shadow-accent/30"
               >
                 Get Your Free AI Readiness Score →
               </Link>
               <Link
                 href="/revenue-recovery"
-                className="rounded-full border border-[--color-primary] bg-[--color-primary] px-8 py-3.5 font-medium text-white shadow-lg transition hover:bg-[--color-primary]/90"
+                className="rounded-full border border-primary bg-primary px-8 py-3.5 font-medium text-white shadow-lg transition hover:bg-primary/90"
               >
                 Book Revenue Recovery Audit — £297 →
               </Link>
             </div>
             
-            <p className="mt-8 text-sm text-[--color-muted]">
+            <p className="mt-8 text-sm text-muted">
               Founding member pricing available for first 10 implementation clients.<br />
               £0 setup + £297/mo. Pay after 30 days of proven results.
             </p>

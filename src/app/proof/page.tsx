@@ -14,10 +14,10 @@ export default function ProofPage() {
       <section className="relative overflow-hidden bg-white pt-32">
         <div className="mx-auto max-w-4xl px-4 pb-16">
           <div className="text-center">
-            <h1 className="font-bold text-5xl tracking-tight text-[--color-primary] sm:text-6xl">
+            <h1 className="font-bold text-5xl tracking-tight text-primary sm:text-6xl">
               What We&rsquo;ve Found & Fixed
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-[--color-muted] sm:text-xl">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted sm:text-xl">
               Real audit results from 4 businesses across 4 industries and 3 countries. 
               We audited. We found the leaks. We fixed them. Here&rsquo;s the proof.
             </p>
@@ -26,7 +26,7 @@ export default function ProofPage() {
       </section>
 
       {/* Stats */}
-      <section className="border-y border-gray-200 bg-[--color-surface]">
+      <section className="border-y border-gray-200 bg-surface">
         <div className="mx-auto grid max-w-6xl grid-cols-2 divide-x divide-gray-200 px-4 py-8 sm:grid-cols-4">
           {[
             { value: "4", label: "Businesses Audited" },
@@ -35,8 +35,8 @@ export default function ProofPage() {
             { value: "100%", label: "Revenue Leaks Found" },
           ].map((s) => (
             <div key={s.label} className="text-center">
-              <div className="text-2xl font-bold text-[--color-primary] sm:text-3xl">{s.value}</div>
-              <div className="mt-1 text-sm text-[--color-muted]">{s.label}</div>
+              <div className="text-2xl font-bold text-primary sm:text-3xl">{s.value}</div>
+              <div className="mt-1 text-sm text-muted">{s.label}</div>
             </div>
           ))}
         </div>
@@ -46,10 +46,10 @@ export default function ProofPage() {
       <ScrollFade>
         <section className="py-24 bg-white">
           <div className="mx-auto max-w-6xl px-4">
-            <h2 className="text-center font-bold text-3xl text-[--color-primary] sm:text-4xl">
+            <h2 className="text-center font-bold text-3xl text-primary sm:text-4xl">
               Detailed Audit Results
             </h2>
-            <p className="mt-4 text-center text-[--color-muted]">
+            <p className="mt-4 text-center text-muted">
               Every audit follows the same process: find the leaks, quantify the cost, deploy the fix, measure the result.
             </p>
             <div className="mt-14 space-y-12">
@@ -141,29 +141,29 @@ export default function ProofPage() {
               ].map((audit) => (
                 <div
                   key={audit.name}
-                  className="rounded-3xl border border-gray-200 bg-[--color-surface] p-8 shadow-lg"
+                  className="rounded-3xl border border-gray-200 bg-surface p-8 shadow-lg"
                 >
                   <div className="grid gap-8 lg:grid-cols-2">
                     {/* Left Column: Client Info + Audit */}
                     <div>
                       <div className="mb-6">
                         <div className="flex items-center justify-between mb-2">
-                          <h3 className="font-bold text-2xl text-[--color-primary]">{audit.name}</h3>
+                          <h3 className="font-bold text-2xl text-primary">{audit.name}</h3>
                           <span className={`rounded-full px-3 py-1 text-xs font-semibold ${
                             audit.status === 'ACTIVE' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'
                           }`}>
                             {audit.status}
                           </span>
                         </div>
-                        <p className="text-lg text-[--color-text]">{audit.business}</p>
-                        <p className="text-sm text-[--color-muted]">{audit.industry}</p>
+                        <p className="text-lg text-text">{audit.business}</p>
+                        <p className="text-sm text-muted">{audit.industry}</p>
                       </div>
                       
                       <div className="mb-6">
                         <h4 className="font-semibold text-lg text-red-600 mb-3">AUDIT FOUND:</h4>
                         <ul className="space-y-2">
                           {audit.auditFindings.map((finding, index) => (
-                            <li key={index} className="flex gap-2 text-sm text-[--color-text]">
+                            <li key={index} className="flex gap-2 text-sm text-text">
                               <span className="text-red-500 mt-0.5">•</span>
                               {finding}
                             </li>
@@ -183,7 +183,7 @@ export default function ProofPage() {
                         <h4 className="font-semibold text-lg text-blue-600 mb-3">WE DEPLOYED:</h4>
                         <ul className="space-y-2">
                           {audit.deployed.map((solution, index) => (
-                            <li key={index} className="flex gap-2 text-sm text-[--color-text]">
+                            <li key={index} className="flex gap-2 text-sm text-text">
                               <span className="text-blue-500 mt-0.5">•</span>
                               {solution}
                             </li>
@@ -215,24 +215,24 @@ export default function ProofPage() {
 
       {/* Testimonial Spotlight */}
       <ScrollFade>
-        <section className="py-24 bg-[--color-surface]">
+        <section className="py-24 bg-surface">
           <div className="mx-auto max-w-4xl px-4">
-            <h2 className="text-center font-bold text-3xl text-[--color-primary] sm:text-4xl">
+            <h2 className="text-center font-bold text-3xl text-primary sm:text-4xl">
               Client Testimonial
             </h2>
             <div className="mt-12 rounded-3xl border border-yellow-200 bg-yellow-50 p-8 text-center shadow-lg sm:p-12">
               <div className="mb-6 flex justify-center text-yellow-500">
                 <span className="text-3xl">★★★★★</span>
               </div>
-              <blockquote className="text-xl leading-relaxed text-[--color-text] sm:text-2xl">
+              <blockquote className="text-xl leading-relaxed text-text sm:text-2xl">
                 &ldquo;Truly exceptional — Manny did everything we needed and more. 
                 Excellent communication throughout and an incredible workflow produced in a quick timeframe. 
                 It&rsquo;s quite clear Manny has a solid commercial understanding which is imperative to work like this.&rdquo;
               </blockquote>
               <div className="mt-8">
-                <p className="font-bold text-xl text-[--color-primary]">Luke Finney</p>
-                <p className="text-[--color-muted]">Founder & CEO, Manchester UK</p>
-                <div className="mt-4 inline-flex items-center gap-4 text-sm text-[--color-muted]">
+                <p className="font-bold text-xl text-primary">Luke Finney</p>
+                <p className="text-muted">Founder & CEO, Manchester UK</p>
+                <div className="mt-4 inline-flex items-center gap-4 text-sm text-muted">
                   <span className="flex items-center gap-1">
                     ✅ Verified on Upwork
                   </span>
@@ -253,10 +253,10 @@ export default function ProofPage() {
       <ScrollFade>
         <section className="py-24 bg-white">
           <div className="mx-auto max-w-6xl px-4">
-            <h2 className="text-center font-bold text-3xl text-[--color-primary] sm:text-4xl">
+            <h2 className="text-center font-bold text-3xl text-primary sm:text-4xl">
               Industry-Agnostic Approach
             </h2>
-            <p className="mt-4 text-center text-[--color-muted]">
+            <p className="mt-4 text-center text-muted">
               Revenue leaks happen in every industry. Our ACCA-trained approach finds them anywhere.
             </p>
             <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -288,14 +288,14 @@ export default function ProofPage() {
               ].map((item) => (
                 <div
                   key={item.industry}
-                  className="rounded-2xl border border-gray-200 bg-white p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-[--color-accent]/30 hover:shadow-lg"
+                  className="rounded-2xl border border-gray-200 bg-white p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-lg"
                 >
-                  <h3 className="font-bold text-lg text-[--color-primary]">{item.industry}</h3>
-                  <p className="mt-2 text-sm text-[--color-accent] font-medium">{item.example}</p>
+                  <h3 className="font-bold text-lg text-primary">{item.industry}</h3>
+                  <p className="mt-2 text-sm text-accent font-medium">{item.example}</p>
                   
                   <div className="mt-4">
                     <h4 className="text-xs font-semibold uppercase text-red-600 mb-2">Common Leaks</h4>
-                    <ul className="space-y-1 text-xs text-[--color-text]">
+                    <ul className="space-y-1 text-xs text-text">
                       {item.commonLeaks.map((leak) => (
                         <li key={leak}>• {leak}</li>
                       ))}
@@ -304,7 +304,7 @@ export default function ProofPage() {
                   
                   <div className="mt-4 pt-4 border-t border-gray-100">
                     <h4 className="text-xs font-semibold uppercase text-green-600 mb-1">Solution</h4>
-                    <p className="text-xs text-[--color-text]">{item.solution}</p>
+                    <p className="text-xs text-text">{item.solution}</p>
                   </div>
                 </div>
               ))}
@@ -315,9 +315,9 @@ export default function ProofPage() {
 
       {/* The Pattern */}
       <ScrollFade>
-        <section className="py-24 bg-[--color-surface]">
+        <section className="py-24 bg-surface">
           <div className="mx-auto max-w-4xl px-4">
-            <h2 className="text-center font-bold text-3xl text-[--color-primary] sm:text-4xl">
+            <h2 className="text-center font-bold text-3xl text-primary sm:text-4xl">
               The Pattern We See Everywhere
             </h2>
             <div className="mt-12 grid gap-8 sm:grid-cols-3">
@@ -352,9 +352,9 @@ export default function ProofPage() {
             </div>
             
             <div className="mt-12 text-center">
-              <div className="inline-flex items-center gap-2 rounded-full border border-[--color-accent]/30 bg-[--color-accent]/10 px-6 py-3">
+              <div className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-6 py-3">
                 <span className="text-2xl">💡</span>
-                <span className="font-semibold text-[--color-accent]">
+                <span className="font-semibold text-accent">
                   Total typical recovery: £1,800-6,500/month
                 </span>
               </div>
@@ -367,10 +367,10 @@ export default function ProofPage() {
       <ScrollFade>
         <section className="py-24 bg-white">
           <div className="mx-auto max-w-4xl px-4 text-center">
-            <h2 className="font-bold text-3xl text-[--color-primary] sm:text-4xl">
+            <h2 className="font-bold text-3xl text-primary sm:text-4xl">
               Ready for Your Audit?
             </h2>
-            <p className="mt-6 text-lg text-[--color-muted]">
+            <p className="mt-6 text-lg text-muted">
               Every business above has the same story: audit revealed the leaks, AI fixed them, revenue recovered.
               What will we find in yours?
             </p>
@@ -378,19 +378,19 @@ export default function ProofPage() {
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link
                 href="/audit"
-                className="rounded-full bg-[--color-accent] px-8 py-3.5 font-medium text-white shadow-lg shadow-[--color-accent]/25 transition hover:bg-[--color-accent-hover]"
+                className="rounded-full bg-accent px-8 py-3.5 font-medium text-white shadow-lg shadow-accent/25 transition hover:bg-accent-hover"
               >
                 Get Free AI Readiness Audit →
               </Link>
               <Link
                 href="/revenue-recovery"
-                className="rounded-full border border-[--color-primary] bg-[--color-primary] px-8 py-3.5 font-medium text-white shadow-lg transition hover:bg-[--color-primary]/90"
+                className="rounded-full border border-primary bg-primary px-8 py-3.5 font-medium text-white shadow-lg transition hover:bg-primary/90"
               >
                 Book Revenue Recovery Audit — £297 →
               </Link>
             </div>
             
-            <p className="mt-8 text-sm text-[--color-muted]">
+            <p className="mt-8 text-sm text-muted">
               Join Eliezer, Nana, Trinity, and Abi. Find your revenue leaks. Fix them with AI.
             </p>
           </div>

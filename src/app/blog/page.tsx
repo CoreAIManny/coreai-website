@@ -15,18 +15,18 @@ export default function Blog() {
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
             Blog
           </h1>
-          <p className="mt-4 text-lg text-[--color-muted]">
+          <p className="mt-4 text-lg text-muted">
             Practical AI automation insights for UK small businesses. No fluff.
           </p>
         </div>
 
         <div className="mx-auto mt-16 max-w-3xl">
-          <div className="rounded-2xl border border-dashed border-[--color-border] p-12 text-center">
-            <p className="text-[--color-muted]">
+          <div className="rounded-2xl border border-dashed border-border p-12 text-center">
+            <p className="text-muted">
               First posts coming soon. In the meantime, follow me on{" "}
               <a
                 href="https://linkedin.com/in/manny-amoah"
-                className="text-[--color-accent] hover:underline"
+                className="text-accent hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >

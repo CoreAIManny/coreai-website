@@ -106,7 +106,7 @@ export function VapiWidget() {
           <button
             onClick={() => setMode("call")}
             className={`rounded-full px-5 py-2 text-sm font-medium transition ${
-              mode === "call" ? "bg-[--color-accent] text-white shadow-lg" : "text-[--color-muted] hover:text-white"
+              mode === "call" ? "bg-accent text-white shadow-lg" : "text-muted hover:text-white"
             }`}
           >
             🎤 Call
@@ -114,7 +114,7 @@ export function VapiWidget() {
           <button
             onClick={() => setMode("chat")}
             className={`rounded-full px-5 py-2 text-sm font-medium transition ${
-              mode === "chat" ? "bg-[--color-accent] text-white shadow-lg" : "text-[--color-muted] hover:text-white"
+              mode === "chat" ? "bg-accent text-white shadow-lg" : "text-muted hover:text-white"
             }`}
           >
             💬 Chat
@@ -133,7 +133,7 @@ export function VapiWidget() {
             className={`relative flex h-20 w-20 items-center justify-center rounded-full transition-all ${
               callStatus === "active"
                 ? "bg-red-600 hover:bg-red-700"
-                : "bg-[--color-accent] hover:bg-[--color-accent-hover] mic-pulse"
+                : "bg-accent hover:bg-accent-hover mic-pulse"
             } disabled:opacity-50`}
           >
             {callStatus === "active" ? (
@@ -147,7 +147,7 @@ export function VapiWidget() {
             )}
           </button>
 
-          <p className="text-sm text-[--color-muted]">
+          <p className="text-sm text-muted">
             {callStatus === "idle" && "Tap to speak with the AI receptionist"}
             {callStatus === "connecting" && "Connecting…"}
             {callStatus === "active" && (
@@ -159,7 +159,7 @@ export function VapiWidget() {
             {callStatus === "ended" && (
               <>
                 Call ended.{" "}
-                <a href="/book-demo" className="text-[--color-accent] underline">
+                <a href="/book-demo" className="text-accent underline">
                   Book a demo →
                 </a>
               </>
@@ -168,12 +168,12 @@ export function VapiWidget() {
         </div>
       ) : (
         /* CHAT MODE */
-        <div className="rounded-2xl border border-white/10 bg-[--color-surface] overflow-hidden">
+        <div className="rounded-2xl border border-white/10 bg-surface overflow-hidden">
           {/* Chat messages */}
           <div className="h-72 overflow-y-auto p-4 space-y-3">
             {chatMessages.length === 0 && (
               <div className="flex h-full items-center justify-center">
-                <p className="text-sm text-[--color-muted]">
+                <p className="text-sm text-muted">
                   Send a message to chat with the AI receptionist
                 </p>
               </div>
@@ -186,7 +186,7 @@ export function VapiWidget() {
                 <div
                   className={`max-w-[80%] rounded-2xl px-4 py-2.5 text-sm ${
                     msg.role === "user"
-                      ? "bg-[--color-accent] text-white"
+                      ? "bg-accent text-white"
                       : "bg-white/5 text-gray-300 border border-white/5"
                   }`}
                 >
@@ -198,9 +198,9 @@ export function VapiWidget() {
               <div className="flex justify-start">
                 <div className="rounded-2xl bg-white/5 border border-white/5 px-4 py-3">
                   <div className="flex gap-1">
-                    <span className="h-2 w-2 rounded-full bg-[--color-muted] animate-bounce" style={{ animationDelay: "0s" }} />
-                    <span className="h-2 w-2 rounded-full bg-[--color-muted] animate-bounce" style={{ animationDelay: "0.15s" }} />
-                    <span className="h-2 w-2 rounded-full bg-[--color-muted] animate-bounce" style={{ animationDelay: "0.3s" }} />
+                    <span className="h-2 w-2 rounded-full bg-muted animate-bounce" style={{ animationDelay: "0s" }} />
+                    <span className="h-2 w-2 rounded-full bg-muted animate-bounce" style={{ animationDelay: "0.15s" }} />
+                    <span className="h-2 w-2 rounded-full bg-muted animate-bounce" style={{ animationDelay: "0.3s" }} />
                   </div>
                 </div>
               </div>
@@ -217,12 +217,12 @@ export function VapiWidget() {
                 onChange={(e) => setChatInput(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && sendChat()}
                 placeholder="Type a message…"
-                className="flex-1 rounded-xl bg-white/5 px-4 py-2.5 text-sm text-white placeholder-[--color-muted] outline-none border border-white/5 focus:border-[--color-accent]/50 transition"
+                className="flex-1 rounded-xl bg-white/5 px-4 py-2.5 text-sm text-white placeholder-muted outline-none border border-white/5 focus:border-accent/50 transition"
               />
               <button
                 onClick={sendChat}
                 disabled={!chatInput.trim() || chatLoading}
-                className="rounded-xl bg-[--color-accent] px-4 py-2.5 text-sm font-medium text-white transition hover:bg-[--color-accent-hover] disabled:opacity-50"
+                className="rounded-xl bg-accent px-4 py-2.5 text-sm font-medium text-white transition hover:bg-accent-hover disabled:opacity-50"
               >
                 Send
               </button>

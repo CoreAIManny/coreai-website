@@ -13,22 +13,22 @@ export default function RevenueRecoveryPage() {
       <section className="relative overflow-hidden bg-white pt-32">
         <div className="mx-auto max-w-4xl px-4 pb-16">
           <div className="text-center">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[--color-primary]/30 bg-[--color-primary]/10 px-4 py-1.5 text-sm text-[--color-primary]">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm text-primary">
               <span>💰</span>
               <span>ACCA-Grade Analysis • 48hr Report</span>
             </div>
 
-            <h1 className="font-bold text-5xl tracking-tight text-[--color-primary] sm:text-6xl">
+            <h1 className="font-bold text-5xl tracking-tight text-primary sm:text-6xl">
               Revenue Recovery Audit
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-[--color-muted] sm:text-xl">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted sm:text-xl">
               Find out exactly how much money your business is losing and get a specific plan to recover it. 
               ACCA-qualified analysis with exact £ figures.
             </p>
             
             <div className="mt-10">
-              <div className="text-4xl font-bold text-[--color-primary]">£297</div>
-              <p className="mt-2 text-sm text-[--color-muted]">One-off payment • Professional report included</p>
+              <div className="text-4xl font-bold text-primary">£297</div>
+              <p className="mt-2 text-sm text-muted">One-off payment • Professional report included</p>
             </div>
           </div>
         </div>
@@ -36,9 +36,9 @@ export default function RevenueRecoveryPage() {
 
       {/* What You Get */}
       <ScrollFade>
-        <section className="py-24 bg-[--color-surface]">
+        <section className="py-24 bg-surface">
           <div className="mx-auto max-w-6xl px-4">
-            <h2 className="text-center font-bold text-3xl text-[--color-primary] sm:text-4xl">
+            <h2 className="text-center font-bold text-3xl text-primary sm:text-4xl">
               What&rsquo;s Included
             </h2>
             <div className="mt-14 grid gap-6 lg:grid-cols-2">
@@ -67,11 +67,11 @@ export default function RevenueRecoveryPage() {
                   key={section.title}
                   className="rounded-2xl border border-gray-200 bg-white p-8"
                 >
-                  <h3 className="font-semibold text-xl text-[--color-primary]">{section.title}</h3>
+                  <h3 className="font-semibold text-xl text-primary">{section.title}</h3>
                   <ul className="mt-6 space-y-3">
                     {section.items.map((item) => (
-                      <li key={item} className="flex gap-3 text-sm text-[--color-text]">
-                        <span className="text-[--color-accent]">✓</span>
+                      <li key={item} className="flex gap-3 text-sm text-text">
+                        <span className="text-accent">✓</span>
                         {item}
                       </li>
                     ))}
@@ -87,10 +87,10 @@ export default function RevenueRecoveryPage() {
       <ScrollFade>
         <section className="py-24 bg-white">
           <div className="mx-auto max-w-4xl px-4 text-center">
-            <h2 className="font-bold text-3xl text-[--color-primary] sm:text-4xl">
+            <h2 className="font-bold text-3xl text-primary sm:text-4xl">
               The ACCA Differentiator
             </h2>
-            <p className="mt-6 text-lg text-[--color-muted]">
+            <p className="mt-6 text-lg text-muted">
               Most AI consultants show you cool demos. I show you the ROI first.
             </p>
             
@@ -110,14 +110,14 @@ export default function RevenueRecoveryPage() {
                 },
               ].map((item) => (
                 <div key={item.title} className="text-center">
-                  <h3 className="font-semibold text-lg text-[--color-primary]">{item.title}</h3>
-                  <p className="mt-3 text-sm text-[--color-muted]">{item.desc}</p>
+                  <h3 className="font-semibold text-lg text-primary">{item.title}</h3>
+                  <p className="mt-3 text-sm text-muted">{item.desc}</p>
                 </div>
               ))}
             </div>
             
             <div className="mt-12 rounded-2xl border border-yellow-200 bg-yellow-50 p-6">
-              <p className="text-sm text-[--color-text]">
+              <p className="text-sm text-text">
                 <strong>Background:</strong> ACCA qualified, 15 years at Visa Europe and UK Cabinet Office. 
                 I&rsquo;ve seen the financial guts of major organisations. Now I help small businesses 
                 plug the same leaks that cost corporates millions.
@@ -129,12 +129,12 @@ export default function RevenueRecoveryPage() {
 
       {/* Sample Report Sections */}
       <ScrollFade>
-        <section className="py-24 bg-[--color-surface]">
+        <section className="py-24 bg-surface">
           <div className="mx-auto max-w-6xl px-4">
-            <h2 className="text-center font-bold text-3xl text-[--color-primary] sm:text-4xl">
+            <h2 className="text-center font-bold text-3xl text-primary sm:text-4xl">
               Sample Report Sections
             </h2>
-            <p className="mt-4 text-center text-[--color-muted]">
+            <p className="mt-4 text-center text-muted">
               Here&rsquo;s what a typical Revenue Recovery Report contains
             </p>
             <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -156,10 +156,10 @@ export default function RevenueRecoveryPage() {
                   key={section.title}
                   className="rounded-2xl border border-gray-200 bg-white p-6"
                 >
-                  <h3 className="font-semibold text-lg text-[--color-primary]">{section.title}</h3>
+                  <h3 className="font-semibold text-lg text-primary">{section.title}</h3>
                   <ul className="mt-4 space-y-2">
                     {section.items.map((item) => (
-                      <li key={item} className="text-sm text-[--color-text]">
+                      <li key={item} className="text-sm text-text">
                         • {item}
                       </li>
                     ))}
@@ -175,7 +175,7 @@ export default function RevenueRecoveryPage() {
       <ScrollFade>
         <section className="py-24 bg-white">
           <div className="mx-auto max-w-6xl px-4">
-            <h2 className="text-center font-bold text-3xl text-[--color-primary] sm:text-4xl">
+            <h2 className="text-center font-bold text-3xl text-primary sm:text-4xl">
               How It Works
             </h2>
             <div className="mt-14 grid gap-8 sm:grid-cols-4">
@@ -202,11 +202,11 @@ export default function RevenueRecoveryPage() {
                 },
               ].map((item) => (
                 <div key={item.step} className="text-center">
-                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-[--color-primary] text-lg font-bold text-white">
+                  <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-primary text-lg font-bold text-white">
                     {item.step}
                   </div>
-                  <h3 className="mt-6 font-semibold text-lg text-[--color-primary]">{item.title}</h3>
-                  <p className="mt-3 text-sm text-[--color-muted] leading-relaxed">{item.desc}</p>
+                  <h3 className="mt-6 font-semibold text-lg text-primary">{item.title}</h3>
+                  <p className="mt-3 text-sm text-muted leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -216,22 +216,22 @@ export default function RevenueRecoveryPage() {
 
       {/* Calendar Booking */}
       <ScrollFade>
-        <section className="py-24 bg-[--color-surface]">
+        <section className="py-24 bg-surface">
           <div className="mx-auto max-w-4xl px-4">
-            <div className="rounded-3xl border border-[--color-primary]/30 bg-gradient-to-br from-[--color-primary]/5 to-white p-8 text-center shadow-lg sm:p-12">
-              <h2 className="font-bold text-3xl text-[--color-primary]">
+            <div className="rounded-3xl border border-primary/30 bg-gradient-to-br from-primary/5 to-white p-8 text-center shadow-lg sm:p-12">
+              <h2 className="font-bold text-3xl text-primary">
                 Book Your Revenue Recovery Audit
               </h2>
-              <p className="mt-4 text-lg text-[--color-muted]">
+              <p className="mt-4 text-lg text-muted">
                 £297 • 60-90 minutes with Manny • Professional report in 48hrs
               </p>
               
               {/* Calendar placeholder */}
               <div className="mx-auto mt-8 max-w-2xl rounded-2xl border border-gray-200 bg-white p-8">
-                <p className="text-lg font-semibold text-[--color-primary]">
+                <p className="text-lg font-semibold text-primary">
                   📅 Calendar Integration Coming Soon
                 </p>
-                <p className="mt-4 text-[--color-text]">
+                <p className="mt-4 text-text">
                   In the meantime, use the link below to book directly through Cal.com:
                 </p>
                 <div className="mt-6">
@@ -239,12 +239,12 @@ export default function RevenueRecoveryPage() {
                     href="https://cal.com/manny-amoah-iys902/30min"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block rounded-full bg-[--color-primary] px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-[--color-primary]/30 transition-all duration-300 hover:scale-105 hover:bg-[--color-primary]/90"
+                    className="inline-block rounded-full bg-primary px-8 py-4 text-lg font-semibold text-white shadow-xl shadow-primary/30 transition-all duration-300 hover:scale-105 hover:bg-primary/90"
                   >
                     Book Revenue Recovery Audit — £297 →
                   </a>
                 </div>
-                <p className="mt-4 text-sm text-[--color-muted]">
+                <p className="mt-4 text-sm text-muted">
                   Mention &ldquo;Revenue Recovery Audit&rdquo; when booking
                 </p>
               </div>
@@ -257,7 +257,7 @@ export default function RevenueRecoveryPage() {
       <ScrollFade>
         <section className="py-24 bg-white">
           <div className="mx-auto max-w-4xl px-4 text-center">
-            <h2 className="font-bold text-3xl text-[--color-primary] sm:text-4xl">
+            <h2 className="font-bold text-3xl text-primary sm:text-4xl">
               Our Promise
             </h2>
             <div className="mt-12 rounded-2xl border border-green-200 bg-green-50 p-8">
@@ -269,7 +269,7 @@ export default function RevenueRecoveryPage() {
               </p>
             </div>
             
-            <p className="mt-8 text-sm text-[--color-muted]">
+            <p className="mt-8 text-sm text-muted">
               We&rsquo;ve never had to honour this guarantee. Most businesses lose £3,000-8,000/month to operational inefficiencies.
             </p>
           </div>
@@ -278,9 +278,9 @@ export default function RevenueRecoveryPage() {
 
       {/* FAQ */}
       <ScrollFade>
-        <section className="py-24 bg-[--color-surface]">
+        <section className="py-24 bg-surface">
           <div className="mx-auto max-w-4xl px-4">
-            <h2 className="text-center font-bold text-3xl text-[--color-primary] sm:text-4xl">
+            <h2 className="text-center font-bold text-3xl text-primary sm:text-4xl">
               Frequently Asked Questions
             </h2>
             <div className="mt-14 space-y-6">
@@ -303,8 +303,8 @@ export default function RevenueRecoveryPage() {
                 },
               ].map((item, index) => (
                 <div key={index} className="rounded-2xl border border-gray-200 bg-white p-6">
-                  <h3 className="font-semibold text-lg text-[--color-primary]">{item.question}</h3>
-                  <p className="mt-3 text-sm text-[--color-text] leading-relaxed">{item.answer}</p>
+                  <h3 className="font-semibold text-lg text-primary">{item.question}</h3>
+                  <p className="mt-3 text-sm text-text leading-relaxed">{item.answer}</p>
                 </div>
               ))}
             </div>

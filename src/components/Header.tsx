@@ -40,7 +40,7 @@ export function Header() {
         visible ? "translate-y-0 opacity-100" : "-translate-y-[calc(100%+2rem)] opacity-0"
       }`}
     >
-      <div className="rounded-2xl border border-gray-200 bg-white/95 px-4 py-3 shadow-xl shadow-gray-900/10 backdrop-blur-xl">
+      <div className="rounded-2xl border border-gray-200 bg-white/95 px-4 py-3 shadow-xl shadow-gray-900/10 backdrop-blur-xl ring-1 ring-accent/10">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <Image src="/logo.png" alt="Core AI Solutions" width={160} height={40} className="h-8 w-auto" priority />
@@ -52,7 +52,7 @@ export function Header() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="rounded-lg px-3 py-1.5 text-sm text-[--color-primary] transition hover:bg-gray-100 hover:text-[--color-accent]"
+                className="rounded-lg px-3 py-1.5 text-sm text-primary transition hover:bg-gray-100 hover:text-accent"
               >
                 {item.label}
               </Link>
@@ -62,7 +62,7 @@ export function Header() {
           <div className="hidden items-center gap-3 md:flex">
             <Link
               href="/book-demo"
-              className="rounded-full bg-[--color-accent] px-5 py-2 text-sm font-medium text-white transition hover:bg-[--color-accent-hover]"
+              className="rounded-full bg-accent px-5 py-2 text-sm font-medium text-white transition hover:bg-accent-hover"
             >
               Book Free Audit →
             </Link>
@@ -71,7 +71,7 @@ export function Header() {
           {/* Mobile toggle */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden text-[--color-primary]"
+            className="md:hidden text-primary"
             aria-label="Menu"
           >
             {open ? (
@@ -90,7 +90,7 @@ export function Header() {
                 key={item.label}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="block rounded-lg px-3 py-2.5 text-[--color-primary] hover:bg-gray-100 hover:text-[--color-accent]"
+                className="block rounded-lg px-3 py-2.5 text-primary hover:bg-gray-100 hover:text-accent"
               >
                 {item.label}
               </Link>
@@ -98,7 +98,7 @@ export function Header() {
             <Link
               href="/book-demo"
               onClick={() => setOpen(false)}
-              className="mt-3 block rounded-full bg-[--color-accent] px-4 py-3 text-center font-medium text-white"
+              className="mt-3 block rounded-full bg-accent px-4 py-3 text-center font-medium text-white"
             >
               Book Free Audit →
             </Link>

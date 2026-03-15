@@ -13,10 +13,10 @@ export default function SolutionsPage() {
       <section className="relative overflow-hidden bg-white pt-32">
         <div className="mx-auto max-w-4xl px-4 pb-16">
           <div className="text-center">
-            <h1 className="font-bold text-5xl tracking-tight text-[--color-primary] sm:text-6xl">
+            <h1 className="font-bold text-5xl tracking-tight text-primary sm:text-6xl">
               AI Solutions That Fix Your Revenue Leaks
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-[--color-muted] sm:text-xl">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted sm:text-xl">
               We don&rsquo;t sell you AI. We fix the business problems that are costing you money every day.
             </p>
           </div>
@@ -25,9 +25,9 @@ export default function SolutionsPage() {
 
       {/* Solutions by Problem */}
       <ScrollFade>
-        <section className="py-24 bg-[--color-surface]">
+        <section className="py-24 bg-surface">
           <div className="mx-auto max-w-6xl px-4">
-            <h2 className="text-center font-bold text-3xl text-[--color-primary] sm:text-4xl">
+            <h2 className="text-center font-bold text-3xl text-primary sm:text-4xl">
               Solutions by Business Problem
             </h2>
             <div className="mt-14 grid gap-8 sm:grid-cols-2">
@@ -91,19 +91,19 @@ export default function SolutionsPage() {
               ].map((item) => (
                 <div
                   key={item.problem}
-                  className="rounded-2xl border border-gray-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[--color-accent]/30 hover:shadow-lg"
+                  className="rounded-2xl border border-gray-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-lg"
                 >
                   <div className="mb-6">
-                    <h3 className="font-bold text-xl text-[--color-primary]">{item.problem}</h3>
+                    <h3 className="font-bold text-xl text-primary">{item.problem}</h3>
                     <p className="mt-2 text-sm text-red-600 italic">{item.pain}</p>
                   </div>
                   
                   <div className="mb-6">
-                    <h4 className="font-semibold text-lg text-[--color-accent]">{item.solution}</h4>
+                    <h4 className="font-semibold text-lg text-accent">{item.solution}</h4>
                     <ul className="mt-3 space-y-2">
                       {item.details.map((detail) => (
-                        <li key={detail} className="flex gap-2 text-sm text-[--color-text]">
-                          <span className="text-[--color-accent] mt-0.5">•</span>
+                        <li key={detail} className="flex gap-2 text-sm text-text">
+                          <span className="text-accent mt-0.5">•</span>
                           {detail}
                         </li>
                       ))}
@@ -111,10 +111,10 @@ export default function SolutionsPage() {
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <span className="font-semibold text-[--color-primary]">{item.pricing}</span>
+                    <span className="font-semibold text-primary">{item.pricing}</span>
                     <Link
                       href="/book-demo"
-                      className="rounded-full bg-[--color-accent] px-6 py-2.5 text-sm font-medium text-white transition hover:bg-[--color-accent-hover]"
+                      className="rounded-full bg-accent px-6 py-2.5 text-sm font-medium text-white transition hover:bg-accent-hover"
                     >
                       {item.cta} →
                     </Link>
@@ -131,17 +131,17 @@ export default function SolutionsPage() {
         <section className="py-24 bg-white">
           <div className="mx-auto max-w-6xl px-4">
             <div className="text-center mb-14">
-              <h2 className="font-bold text-3xl text-[--color-primary] sm:text-4xl">
+              <h2 className="font-bold text-3xl text-primary sm:text-4xl">
                 Revenue Recovery Engine
               </h2>
-              <p className="mt-4 text-lg text-[--color-muted]">
+              <p className="mt-4 text-lg text-muted">
                 Our flagship solution that plugs all your revenue leaks systematically
               </p>
             </div>
             
             <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
               <div>
-                <h3 className="font-bold text-2xl text-[--color-primary]">How It Works</h3>
+                <h3 className="font-bold text-2xl text-primary">How It Works</h3>
                 <div className="mt-6 space-y-6">
                   {[
                     {
@@ -160,20 +160,20 @@ export default function SolutionsPage() {
                       timeline: "Month 2-3",
                     },
                   ].map((item) => (
-                    <div key={item.phase} className="border-l-4 border-[--color-accent] pl-6">
+                    <div key={item.phase} className="border-l-4 border-accent pl-6">
                       <div className="flex items-center justify-between">
-                        <h4 className="font-semibold text-lg text-[--color-primary]">{item.phase}</h4>
-                        <span className="text-sm text-[--color-muted]">{item.timeline}</span>
+                        <h4 className="font-semibold text-lg text-primary">{item.phase}</h4>
+                        <span className="text-sm text-muted">{item.timeline}</span>
                       </div>
-                      <p className="mt-2 text-sm text-[--color-text]">{item.desc}</p>
+                      <p className="mt-2 text-sm text-text">{item.desc}</p>
                     </div>
                   ))}
                 </div>
               </div>
               
               <div>
-                <h3 className="font-bold text-2xl text-[--color-primary]">What&rsquo;s Included</h3>
-                <div className="mt-6 rounded-2xl border border-[--color-accent]/20 bg-[--color-accent]/5 p-6">
+                <h3 className="font-bold text-2xl text-primary">What&rsquo;s Included</h3>
+                <div className="mt-6 rounded-2xl border border-accent/20 bg-accent/5 p-6">
                   <ul className="space-y-3">
                     {[
                       "AI receptionist (Vapi) — custom voice, your scripts",
@@ -184,22 +184,22 @@ export default function SolutionsPage() {
                       "Weekly performance reports with £ metrics",
                       "Ongoing optimization and support",
                     ].map((item) => (
-                      <li key={item} className="flex gap-3 text-sm text-[--color-text]">
-                        <span className="text-[--color-accent]">✓</span>
+                      <li key={item} className="flex gap-3 text-sm text-text">
+                        <span className="text-accent">✓</span>
                         {item}
                       </li>
                     ))}
                   </ul>
                   
-                  <div className="mt-6 pt-6 border-t border-[--color-accent]/20">
+                  <div className="mt-6 pt-6 border-t border-accent/20">
                     <div className="flex items-center justify-between">
                       <div>
-                        <p className="font-semibold text-[--color-primary]">Founding Member Pricing</p>
-                        <p className="text-sm text-[--color-muted]">First 10 clients only</p>
+                        <p className="font-semibold text-primary">Founding Member Pricing</p>
+                        <p className="text-sm text-muted">First 10 clients only</p>
                       </div>
                       <div className="text-right">
-                        <p className="text-2xl font-bold text-[--color-primary]">£297/mo</p>
-                        <p className="text-sm text-[--color-muted]">Normally £497/mo</p>
+                        <p className="text-2xl font-bold text-primary">£297/mo</p>
+                        <p className="text-sm text-muted">Normally £497/mo</p>
                       </div>
                     </div>
                   </div>
@@ -212,20 +212,20 @@ export default function SolutionsPage() {
 
       {/* HireOnce Spotlight */}
       <ScrollFade>
-        <section className="py-24 bg-[--color-surface]">
+        <section className="py-24 bg-surface">
           <div className="mx-auto max-w-6xl px-4">
             <div className="text-center mb-14">
-              <h2 className="font-bold text-3xl text-[--color-primary] sm:text-4xl">
+              <h2 className="font-bold text-3xl text-primary sm:text-4xl">
                 HireOnce — Your 24/7 AI Employee
               </h2>
-              <p className="mt-4 text-lg text-[--color-muted]">
+              <p className="mt-4 text-lg text-muted">
                 The only AI employee you&rsquo;ll ever need to hire
               </p>
             </div>
             
             <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
               <div className="rounded-2xl border border-gray-200 bg-white p-8">
-                <h3 className="font-bold text-xl text-[--color-primary] mb-6">
+                <h3 className="font-bold text-xl text-primary mb-6">
                   What Your AI Employee Does
                 </h3>
                 <div className="grid gap-6 sm:grid-cols-2">
@@ -248,10 +248,10 @@ export default function SolutionsPage() {
                     },
                   ].map((section) => (
                     <div key={section.category}>
-                      <h4 className="font-semibold text-[--color-accent] mb-3">{section.category}</h4>
+                      <h4 className="font-semibold text-accent mb-3">{section.category}</h4>
                       <ul className="space-y-1">
                         {section.tasks.map((task) => (
-                          <li key={task} className="text-sm text-[--color-text]">• {task}</li>
+                          <li key={task} className="text-sm text-text">• {task}</li>
                         ))}
                       </ul>
                     </div>
@@ -259,46 +259,46 @@ export default function SolutionsPage() {
                 </div>
               </div>
               
-              <div className="rounded-2xl border border-[--color-primary]/20 bg-[--color-primary]/5 p-8">
-                <h3 className="font-bold text-xl text-[--color-primary] mb-6">
+              <div className="rounded-2xl border border-primary/20 bg-primary/5 p-8">
+                <h3 className="font-bold text-xl text-primary mb-6">
                   Fully Managed Service
                 </h3>
-                <div className="space-y-4 text-sm text-[--color-text]">
+                <div className="space-y-4 text-sm text-text">
                   <div className="flex gap-3">
-                    <span className="text-[--color-accent]">✓</span>
+                    <span className="text-accent">✓</span>
                     <div>
                       <strong>Complete Setup:</strong> We handle everything — OpenClaw installation, AI training, workflow configuration, tool integration.
                     </div>
                   </div>
                   <div className="flex gap-3">
-                    <span className="text-[--color-accent]">✓</span>
+                    <span className="text-accent">✓</span>
                     <div>
                       <strong>Ongoing Training:</strong> Your AI gets better over time as it learns your business and customer patterns.
                     </div>
                   </div>
                   <div className="flex gap-3">
-                    <span className="text-[--color-accent]">✓</span>
+                    <span className="text-accent">✓</span>
                     <div>
                       <strong>24/7 Monitoring:</strong> We monitor performance and make adjustments. You focus on running your business.
                     </div>
                   </div>
                   <div className="flex gap-3">
-                    <span className="text-[--color-accent]">✓</span>
+                    <span className="text-accent">✓</span>
                     <div>
                       <strong>White-Glove Support:</strong> Direct access to Manny for questions, adjustments, and new requirements.
                     </div>
                   </div>
                 </div>
                 
-                <div className="mt-8 pt-6 border-t border-[--color-primary]/20">
+                <div className="mt-8 pt-6 border-t border-primary/20">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="font-semibold text-[--color-primary]">All-Inclusive Pricing</p>
-                      <p className="text-sm text-[--color-muted]">Setup + Management + Support</p>
+                      <p className="font-semibold text-primary">All-Inclusive Pricing</p>
+                      <p className="text-sm text-muted">Setup + Management + Support</p>
                     </div>
                     <div className="text-right">
-                      <p className="text-2xl font-bold text-[--color-primary]">£497/mo</p>
-                      <p className="text-sm text-[--color-muted]">No setup fees</p>
+                      <p className="text-2xl font-bold text-primary">£497/mo</p>
+                      <p className="text-sm text-muted">No setup fees</p>
                     </div>
                   </div>
                 </div>
@@ -312,12 +312,12 @@ export default function SolutionsPage() {
       <ScrollFade>
         <section className="py-24 bg-white">
           <div className="mx-auto max-w-4xl px-4">
-            <h2 className="text-center font-bold text-3xl text-[--color-primary] sm:text-4xl">
+            <h2 className="text-center font-bold text-3xl text-primary sm:text-4xl">
               ROI vs Hiring
             </h2>
             <div className="mt-12 overflow-hidden rounded-2xl border border-gray-200">
               <div className="grid grid-cols-3 gap-0">
-                <div className="bg-gray-50 p-4 font-semibold text-[--color-primary] text-center border-r border-gray-200">
+                <div className="bg-gray-50 p-4 font-semibold text-primary text-center border-r border-gray-200">
                   Cost Factor
                 </div>
                 <div className="bg-red-50 p-4 font-semibold text-red-700 text-center border-r border-gray-200">
@@ -350,7 +350,7 @@ export default function SolutionsPage() {
                 ))}
               </div>
             </div>
-            <p className="mt-6 text-center text-sm text-[--color-muted]">
+            <p className="mt-6 text-center text-sm text-muted">
               *Based on UK minimum wage + employer costs for part-time admin role
             </p>
           </div>
@@ -359,25 +359,25 @@ export default function SolutionsPage() {
 
       {/* Next Steps */}
       <ScrollFade>
-        <section className="py-24 bg-[--color-surface]">
+        <section className="py-24 bg-surface">
           <div className="mx-auto max-w-4xl px-4 text-center">
-            <h2 className="font-bold text-3xl text-[--color-primary] sm:text-4xl">
+            <h2 className="font-bold text-3xl text-primary sm:text-4xl">
               Ready to Stop Losing Revenue?
             </h2>
-            <p className="mt-6 text-lg text-[--color-muted]">
+            <p className="mt-6 text-lg text-muted">
               Start with our free audit to see exactly where your business is bleeding money.
             </p>
             
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link
                 href="/audit"
-                className="rounded-full bg-[--color-accent] px-8 py-3.5 font-medium text-white shadow-lg shadow-[--color-accent]/25 transition hover:bg-[--color-accent-hover]"
+                className="rounded-full bg-accent px-8 py-3.5 font-medium text-white shadow-lg shadow-accent/25 transition hover:bg-accent-hover"
               >
                 Get Free AI Readiness Audit →
               </Link>
               <Link
                 href="/revenue-recovery"
-                className="rounded-full border border-[--color-primary] bg-[--color-primary] px-8 py-3.5 font-medium text-white shadow-lg transition hover:bg-[--color-primary]/90"
+                className="rounded-full border border-primary bg-primary px-8 py-3.5 font-medium text-white shadow-lg transition hover:bg-primary/90"
               >
                 Book Revenue Recovery Audit — £297 →
               </Link>

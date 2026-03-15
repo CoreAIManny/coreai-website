@@ -121,12 +121,12 @@ ${formData.anythingElse || "N/A"}
             <h1 className="mb-4 font-[family-name:var(--font-playfair)] text-4xl font-bold sm:text-5xl">
               Thank you!
             </h1>
-            <p className="mb-8 text-lg text-[--color-muted]">
+            <p className="mb-8 text-lg text-muted">
               Your feedback means the world to us. We'll be in touch soon.
             </p>
             <Link
               href="/"
-              className="inline-block rounded-full bg-[--color-accent] px-8 py-3.5 font-medium text-white transition-colors hover:bg-[--color-accent-hover]"
+              className="inline-block rounded-full bg-accent px-8 py-3.5 font-medium text-white transition-colors hover:bg-accent-hover"
             >
               Back to Homepage
             </Link>
@@ -137,17 +137,17 @@ ${formData.anythingElse || "N/A"}
   }
 
   return (
-    <div className="min-h-screen bg-white text-[--color-text] pt-24">
+    <div className="min-h-screen bg-white text-text pt-24">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
         {/* Header */}
         <div className="mb-12 text-center">
-          <p className="mb-3 text-sm font-medium uppercase tracking-wider text-[--color-muted]">
+          <p className="mb-3 text-sm font-medium uppercase tracking-wider text-muted">
             Core AI Solutions
           </p>
           <h1 className="mb-4 font-[family-name:var(--font-playfair)] text-4xl font-bold sm:text-5xl lg:text-6xl">
             Share Your Experience
           </h1>
-          <p className="mx-auto max-w-2xl text-lg text-[--color-muted]">
+          <p className="mx-auto max-w-2xl text-lg text-muted">
             Your feedback helps us improve and helps other businesses discover
             what's possible with AI. It takes less than 2 minutes.
           </p>
@@ -155,12 +155,12 @@ ${formData.anythingElse || "N/A"}
 
         {/* Form Card */}
         <form onSubmit={handleSubmitEmail} className="mx-auto max-w-3xl">
-          <div className="rounded-xl border border-gray-200 bg-[--color-surface] p-6 sm:p-8">
+          <div className="rounded-xl border border-gray-200 bg-surface p-6 sm:p-8">
             <div className="space-y-6">
               {/* Name */}
               <div>
                 <label htmlFor="name" className="mb-2 block text-sm font-medium text-white">
-                  Your Name <span className="text-[--color-accent]">*</span>
+                  Your Name <span className="text-accent">*</span>
                 </label>
                 <input
                   type="text"
@@ -169,14 +169,14 @@ ${formData.anythingElse || "N/A"}
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full rounded-lg border border-[--color-border] bg-[--color-surface-light] px-4 py-3 text-white placeholder-[--color-muted] focus:border-[--color-accent] focus:outline-none focus:ring-1 focus:ring-[--color-accent]"
+                  className="w-full rounded-lg border border-border bg-surface-light px-4 py-3 text-text placeholder-muted focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
                 />
               </div>
 
               {/* Business Name */}
               <div>
                 <label htmlFor="business" className="mb-2 block text-sm font-medium text-white">
-                  Your Business Name <span className="text-[--color-accent]">*</span>
+                  Your Business Name <span className="text-accent">*</span>
                 </label>
                 <input
                   type="text"
@@ -185,14 +185,14 @@ ${formData.anythingElse || "N/A"}
                   required
                   value={formData.business}
                   onChange={handleChange}
-                  className="w-full rounded-lg border border-[--color-border] bg-[--color-surface-light] px-4 py-3 text-white placeholder-[--color-muted] focus:border-[--color-accent] focus:outline-none focus:ring-1 focus:ring-[--color-accent]"
+                  className="w-full rounded-lg border border-border bg-surface-light px-4 py-3 text-text placeholder-muted focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
                 />
               </div>
 
               {/* AI Helps With */}
               <div>
                 <label htmlFor="aiHelps" className="mb-2 block text-sm font-medium text-white">
-                  What does your AI assistant help you with? <span className="text-[--color-accent]">*</span>
+                  What does your AI assistant help you with? <span className="text-accent">*</span>
                 </label>
                 <textarea
                   id="aiHelps"
@@ -201,14 +201,14 @@ ${formData.anythingElse || "N/A"}
                   value={formData.aiHelps}
                   onChange={handleChange}
                   placeholder="e.g., managing emails, scheduling, research, content creation..."
-                  className="min-h-[100px] w-full rounded-lg border border-[--color-border] bg-[--color-surface-light] px-4 py-3 text-white placeholder-[--color-muted] focus:border-[--color-accent] focus:outline-none focus:ring-1 focus:ring-[--color-accent]"
+                  className="min-h-[100px] w-full rounded-lg border border-border bg-surface-light px-4 py-3 text-text placeholder-muted focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
                 />
               </div>
 
               {/* Work Changed */}
               <div>
                 <label htmlFor="workChanged" className="mb-2 block text-sm font-medium text-white">
-                  How has it changed the way you work? <span className="text-[--color-accent]">*</span>
+                  How has it changed the way you work? <span className="text-accent">*</span>
                 </label>
                 <textarea
                   id="workChanged"
@@ -217,14 +217,14 @@ ${formData.anythingElse || "N/A"}
                   value={formData.workChanged}
                   onChange={handleChange}
                   placeholder="e.g., saves me 2 hours a day, I never miss follow-ups now..."
-                  className="min-h-[100px] w-full rounded-lg border border-[--color-border] bg-[--color-surface-light] px-4 py-3 text-white placeholder-[--color-muted] focus:border-[--color-accent] focus:outline-none focus:ring-1 focus:ring-[--color-accent]"
+                  className="min-h-[100px] w-full rounded-lg border border-border bg-surface-light px-4 py-3 text-text placeholder-muted focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
                 />
               </div>
 
               {/* Favourite Thing */}
               <div>
                 <label htmlFor="favourite" className="mb-2 block text-sm font-medium text-white">
-                  What's your favourite thing about having an AI assistant? <span className="text-[--color-accent]">*</span>
+                  What's your favourite thing about having an AI assistant? <span className="text-accent">*</span>
                 </label>
                 <textarea
                   id="favourite"
@@ -232,14 +232,14 @@ ${formData.anythingElse || "N/A"}
                   required
                   value={formData.favourite}
                   onChange={handleChange}
-                  className="min-h-[100px] w-full rounded-lg border border-[--color-border] bg-[--color-surface-light] px-4 py-3 text-white placeholder-[--color-muted] focus:border-[--color-accent] focus:outline-none focus:ring-1 focus:ring-[--color-accent]"
+                  className="min-h-[100px] w-full rounded-lg border border-border bg-surface-light px-4 py-3 text-text placeholder-muted focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
                 />
               </div>
 
               {/* Recommend */}
               <div>
                 <label className="mb-3 block text-sm font-medium text-white">
-                  Would you recommend this to other business owners? <span className="text-[--color-accent]">*</span>
+                  Would you recommend this to other business owners? <span className="text-accent">*</span>
                 </label>
                 <div className="space-y-2">
                   {["Absolutely", "Yes", "Maybe", "Not yet"].map((option) => (
@@ -251,7 +251,7 @@ ${formData.anythingElse || "N/A"}
                         checked={formData.recommend === option}
                         onChange={handleChange}
                         required
-                        className="h-4 w-4 border-[--color-border] bg-[--color-surface-light] text-[--color-accent] focus:ring-2 focus:ring-[--color-accent] focus:ring-offset-0"
+                        className="h-4 w-4 border-border bg-surface-light text-accent focus:ring-2 focus:ring-accent focus:ring-offset-0"
                       />
                       <span className="ml-3 text-white">{option}</span>
                     </label>
@@ -262,7 +262,7 @@ ${formData.anythingElse || "N/A"}
               {/* Use on Website */}
               <div>
                 <label className="mb-3 block text-sm font-medium text-white">
-                  Can we use your feedback on our website? <span className="text-[--color-accent]">*</span>
+                  Can we use your feedback on our website? <span className="text-accent">*</span>
                 </label>
                 <div className="space-y-2">
                   {[
@@ -278,7 +278,7 @@ ${formData.anythingElse || "N/A"}
                         checked={formData.useOnWebsite === option}
                         onChange={handleChange}
                         required
-                        className="h-4 w-4 border-[--color-border] bg-[--color-surface-light] text-[--color-accent] focus:ring-2 focus:ring-[--color-accent] focus:ring-offset-0"
+                        className="h-4 w-4 border-border bg-surface-light text-accent focus:ring-2 focus:ring-accent focus:ring-offset-0"
                       />
                       <span className="ml-3 text-white">{option}</span>
                     </label>
@@ -296,7 +296,7 @@ ${formData.anythingElse || "N/A"}
                   name="anythingElse"
                   value={formData.anythingElse}
                   onChange={handleChange}
-                  className="min-h-[100px] w-full rounded-lg border border-[--color-border] bg-[--color-surface-light] px-4 py-3 text-white placeholder-[--color-muted] focus:border-[--color-accent] focus:outline-none focus:ring-1 focus:ring-[--color-accent]"
+                  className="min-h-[100px] w-full rounded-lg border border-border bg-surface-light px-4 py-3 text-text placeholder-muted focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
                 />
               </div>
             </div>
@@ -306,14 +306,14 @@ ${formData.anythingElse || "N/A"}
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full rounded-full bg-[--color-accent] px-8 py-3.5 font-medium text-white transition-colors hover:bg-[--color-accent-hover] disabled:opacity-50 disabled:cursor-not-allowed sm:w-auto"
+                className="w-full rounded-full bg-accent px-8 py-3.5 font-medium text-white transition-colors hover:bg-accent-hover disabled:opacity-50 disabled:cursor-not-allowed sm:w-auto"
               >
                 {isSubmitting ? "Submitting..." : "Submit Testimonial"}
               </button>
               <button
                 type="button"
                 onClick={handleCopyToClipboard}
-                className="relative w-full rounded-full border border-[--color-border] bg-[--color-surface-light] px-8 py-3.5 font-medium text-white transition-colors hover:bg-[--color-border] sm:w-auto"
+                className="relative w-full rounded-full border border-accent bg-accent px-8 py-3.5 font-medium text-white transition-colors hover:bg-accent-hover sm:w-auto"
               >
                 {copySuccess ? "Copied! ✓" : "Copy Responses"}
               </button>
