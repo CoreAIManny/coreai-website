@@ -1,29 +1,28 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://coreaisolutions.co.uk"),
   title: {
-    default: "Core AI Solutions — Free AI Audit | Find Hidden Costs in Your Business",
+    default: "Revenue Recovery Audit — Find Exactly Where Your Business Is Losing Money | Core AI Solutions",
     template: "%s | Core AI Solutions",
   },
   description:
-    "Free AI audit for UK businesses. We find the hidden costs, missed revenue, and wasted hours in your operations — then show you exactly how AI fixes them. ACCA-qualified consultant.",
+    "Stop losing revenue to missed calls, dead leads & manual admin. Free AI Readiness Audit + £297 Revenue Recovery Audit. ACCA-qualified consultant shows you the exact £ your business is bleeding.",
   keywords: [
+    "revenue recovery audit",
     "AI audit for business",
     "AI automation UK",
     "free AI audit",
-    "business efficiency audit",
+    "business revenue leaks",
     "AI employee",
     "workflow automation",
-    "n8n automation",
-    "OpenClaw deployment",
+    "ACCA qualified",
     "HireOnce",
   ],
   openGraph: {
@@ -31,15 +30,15 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: "https://coreaisolutions.co.uk",
     siteName: "Core AI Solutions",
-    title: "Core AI Solutions — Free AI Audit | Find Hidden Costs in Your Business",
+    title: "Revenue Recovery Audit — Find Exactly Where Your Business Is Losing Money",
     description:
-      "Free AI audit that uncovers hidden costs and missed revenue in your business. ACCA-qualified consultant shows you exactly where AI saves you money.",
+      "Stop losing revenue to missed calls, dead leads & manual admin. ACCA-qualified consultant shows you the exact £ your business is bleeding and how AI fixes it.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Core AI Solutions — Free AI Audit | Find Hidden Costs in Your Business",
+    title: "Revenue Recovery Audit — Find Where Your Business Is Losing Money",
     description:
-      "Free AI audit that uncovers hidden costs and missed revenue. Your business is leaking money — we show you where and how AI fixes it.",
+      "Stop losing revenue to missed calls, dead leads & manual admin. Free AI audit + £297 deep dive with exact £ figures.",
   },
   robots: { index: true, follow: true },
 };
@@ -50,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <head>
         <script
           type="application/ld+json"
@@ -61,13 +60,13 @@ export default function RootLayout({
               name: "Core AI Solutions",
               url: "https://coreaisolutions.co.uk",
               description:
-                "Free AI audits for UK businesses. ACCA-qualified consultant finds hidden costs, missed revenue, and wasted hours — then deploys AI automation to fix them.",
+                "Revenue Recovery Audits for UK businesses. ACCA-qualified consultant finds exact £ amounts of revenue leaks, then deploys AI automation to fix them.",
               founder: {
                 "@type": "Person",
                 name: "Manny Amoah",
                 jobTitle: "ACCA-Qualified AI Automation Consultant",
               },
-              serviceType: ["AI Audit", "AI Automation", "OpenClaw Deployment", "Workflow Automation", "Voice AI"],
+              serviceType: ["Revenue Recovery Audit", "AI Automation", "HireOnce AI Employee", "Workflow Automation"],
               areaServed: [
                 { "@type": "Country", "name": "United Kingdom" },
                 { "@type": "Country", "name": "United States" },
@@ -88,7 +87,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${playfair.variable} font-sans bg-[#0e0e10] text-white antialiased`}
+        className={`${inter.variable} font-sans bg-white text-gray-800 antialiased`}
       >
         <Header />
         <main className="min-h-screen">{children}</main>

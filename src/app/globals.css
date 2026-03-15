@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-accent: #3b82f6;
-  --color-accent-hover: #2563eb;
-  --color-surface: #161618;
-  --color-surface-light: #1e1e21;
-  --color-border: #2a2a2e;
-  --color-muted: #9a9a9f;
+  --color-accent: #0d9488;
+  --color-accent-hover: #0f766e;
+  --color-primary: #1a2b5e;
+  --color-surface: #f8fafc;
+  --color-surface-light: #ffffff;
+  --color-border: #e5e7eb;
+  --color-muted: #6b7280;
+  --color-text: #374151;
 }
 
 ::selection {

@@ -1,20 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
-import { VapiWidget } from "@/components/VapiWidget";
 import { Testimonial } from "@/components/Testimonial";
 import { CTA } from "@/components/CTA";
 import { ScrollFade } from "@/components/ScrollFade";
-import { GradientLines } from "@/components/GradientLines";
 
 export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden">
+      <section className="relative overflow-hidden bg-white">
         {/* Background gradient swoosh */}
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute -right-1/4 -top-1/4 h-[600px] w-[600px] rounded-full bg-[--color-accent]/8 blur-[120px]" />
-          <div className="absolute -left-1/4 top-1/4 h-[400px] w-[400px] rounded-full bg-purple-500/5 blur-[100px]" />
+          <div className="absolute -left-1/4 top-1/4 h-[400px] w-[400px] rounded-full bg-[--color-primary]/5 blur-[100px]" />
         </div>
 
         <div className="mx-auto max-w-6xl px-4 pb-16 pt-32 sm:pt-40">
@@ -22,209 +20,293 @@ export default function Home() {
             {/* Trust badge pill */}
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[--color-accent]/30 bg-[--color-accent]/10 px-4 py-1.5 text-sm text-[--color-accent]">
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-[--color-accent] animate-pulse" />
-              Free AI & Automation Audits — Limited Slots
+              Free AI Readiness Audit Available
             </div>
 
-            <h1 className="font-[family-name:var(--font-playfair)] text-5xl font-bold tracking-tight sm:text-7xl">
-              Losing £20-50K/Year to Manual Work?
-              <br />
-              <span className="text-[--color-muted]">Get a Free AI Audit.</span>
+            <h1 className="font-bold text-5xl tracking-tight text-[--color-primary] sm:text-7xl">
+              Stop Losing Revenue to Missed Calls, Dead Leads & Manual Admin.
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-[--color-muted] sm:text-xl">
-              I'll show you exactly where your business is bleeding money — and how to fix it with AI automation. No fluff. No sales pitch. Just ROI.
+              Find out exactly where your business is bleeding money — and how AI can plug the leaks. ACCA-grade analysis with exact £ figures.
             </p>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link
-                href="/book-demo"
+                href="/audit"
                 className="rounded-full bg-[--color-accent] px-8 py-3.5 font-medium text-white shadow-lg shadow-[--color-accent]/25 transition hover:bg-[--color-accent-hover] hover:shadow-xl hover:shadow-[--color-accent]/30"
               >
-                Get Your Free Audit →
+                Get Your Free AI Readiness Score →
+              </Link>
+              <Link
+                href="/revenue-recovery"
+                className="rounded-full border border-[--color-primary] bg-[--color-primary] px-8 py-3.5 font-medium text-white shadow-lg transition hover:bg-[--color-primary]/90"
+              >
+                Book Revenue Recovery Audit — £297 →
               </Link>
             </div>
 
             {/* Trust signal */}
-            <p className="mt-6 text-sm text-[--color-muted]">
-              Prepared by Manny Amoah, ACCA — Former Visa Europe & UK Cabinet Office
-            </p>
-
-            {/* Voice AI widget — right in the hero */}
-            <div className="mt-14">
-              <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[--color-accent]">
-                Try it right now
-              </p>
-              <VapiWidget />
+            <div className="mt-8 flex items-center justify-center gap-6 text-sm text-[--color-muted]">
+              <span>✓ ACCA-Qualified</span>
+              <span>✓ 4 Businesses Deployed</span>
+              <span>✓ 3 Countries</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Stats bar */}
-      <section className="border-y border-white/5">
-        <div className="mx-auto grid max-w-4xl grid-cols-3 divide-x divide-white/5 px-4 py-6">
+      <section className="border-y border-gray-200 bg-[--color-surface]">
+        <div className="mx-auto grid max-w-4xl grid-cols-3 divide-x divide-gray-200 px-4 py-6">
           {[
-            { value: "45 min", label: "Audit call" },
-            { value: "48 hrs", label: "Report delivered" },
-            { value: "£20-50K", label: "Typical savings found" },
+            { value: "4 Businesses", label: "Deployed" },
+            { value: "3 Countries", label: "Across" },
+            { value: "ACCA", label: "Qualified" },
           ].map((s) => (
             <div key={s.label} className="text-center">
-              <div className="text-xl font-bold text-white sm:text-2xl">{s.value}</div>
+              <div className="text-xl font-bold text-[--color-primary] sm:text-2xl">{s.value}</div>
               <div className="mt-1 text-xs text-[--color-muted] sm:text-sm">{s.label}</div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Logo trust strip */}
-      <section className="border-b border-white/5 bg-[--color-surface]">
-        <div className="mx-auto max-w-4xl px-4 py-6 text-center">
-          <p className="text-xs uppercase tracking-widest text-[--color-muted]/60">
-            AI automation for business owners
-          </p>
-          <div className="mt-4 flex items-center justify-center gap-8 text-[--color-muted]/30">
-            {["Sales", "Support", "Operations", "Marketing", "Admin"].map((name) => (
-              <span key={name} className="text-sm font-medium tracking-wide">{name}</span>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Problem → Solution */}
-      <section className="relative overflow-hidden">
-        <GradientLines className="bottom-0" flip />
+      <section className="relative overflow-hidden bg-white">
         <ScrollFade>
           <div className="mx-auto grid max-w-6xl gap-12 px-4 py-24 md:grid-cols-2 md:gap-16">
-            <div className="rounded-2xl border border-white/5 bg-[--color-surface] p-8 transition hover:border-red-500/20 sm:p-10">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-red-400">
+            <div className="rounded-2xl border border-red-200 bg-red-50 p-8 transition hover:border-red-300 sm:p-10">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-red-600">
                 The problem
               </p>
-              <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-2xl font-bold sm:text-3xl">
-                You&rsquo;re drowning in admin. Missing opportunities. Working late.
+              <h2 className="mt-4 font-bold text-2xl text-[--color-primary] sm:text-3xl">
+                Your business is bleeding money right now.
               </h2>
-              <ul className="mt-6 space-y-4 text-[--color-muted]">
-                <li className="flex gap-3"><span className="text-red-400">✕</span> Phone rings while you&rsquo;re in a meeting</li>
-                <li className="flex gap-3"><span className="text-red-400">✕</span> Leads slip through the cracks — no follow-up</li>
-                <li className="flex gap-3"><span className="text-red-400">✕</span> Hours wasted on repetitive admin tasks</li>
-                <li className="flex gap-3"><span className="text-red-400">✕</span> Opportunities lost to faster competitors</li>
+              <ul className="mt-6 space-y-4 text-[--color-text]">
+                <li className="flex gap-3"><span className="text-red-500">✕</span> Phone rings, nobody answers</li>
+                <li className="flex gap-3"><span className="text-red-500">✕</span> Leads go cold — no follow-up</li>
+                <li className="flex gap-3"><span className="text-red-500">✕</span> Hours lost to repetitive admin</li>
+                <li className="flex gap-3"><span className="text-red-500">✕</span> No idea what&rsquo;s costing you money</li>
               </ul>
             </div>
-            <div className="rounded-2xl border border-white/5 bg-[--color-surface] p-8 transition hover:border-green-500/20 sm:p-10">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-green-400">
+            <div className="rounded-2xl border border-green-200 bg-green-50 p-8 transition hover:border-green-300 sm:p-10">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-green-600">
                 The solution
               </p>
-              <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-2xl font-bold sm:text-3xl">
-                AI employees handle it all. Automatically. 24/7.
+              <h2 className="mt-4 font-bold text-2xl text-[--color-primary] sm:text-3xl">
+                AI plugs the leaks. Automatically. 24/7.
               </h2>
-              <ul className="mt-6 space-y-4 text-[--color-muted]">
-                <li className="flex gap-3"><span className="text-green-400">✓</span> Every call answered instantly, every lead captured</li>
-                <li className="flex gap-3"><span className="text-green-400">✓</span> Automatic follow-ups that never forget</li>
-                <li className="flex gap-3"><span className="text-green-400">✓</span> Admin tasks handled while you sleep</li>
-                <li className="flex gap-3"><span className="text-green-400">✓</span> You focus on what matters — growth and strategy</li>
+              <ul className="mt-6 space-y-4 text-[--color-text]">
+                <li className="flex gap-3"><span className="text-green-500">✓</span> AI answers every call, 24/7</li>
+                <li className="flex gap-3"><span className="text-green-500">✓</span> Automated follow-up in minutes</li>
+                <li className="flex gap-3"><span className="text-green-500">✓</span> AI handles admin while you sleep</li>
+                <li className="flex gap-3"><span className="text-green-500">✓</span> ACCA-grade analysis shows exactly where</li>
               </ul>
             </div>
           </div>
         </ScrollFade>
       </section>
 
-      {/* How it works */}
+      {/* CORE Method */}
       <ScrollFade>
-        <section className="py-24">
+        <section className="py-24 bg-[--color-surface]">
           <div className="mx-auto max-w-6xl px-4">
             <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-[--color-accent]">
-              How it works
+              How We Fix It
             </p>
-            <h2 className="mt-4 text-center font-[family-name:var(--font-playfair)] text-3xl font-bold tracking-tight sm:text-5xl">
-              Live in 3 steps
+            <h2 className="mt-4 text-center font-bold text-3xl tracking-tight text-[--color-primary] sm:text-5xl">
+              The C.O.R.E. Method
             </h2>
-            <div className="mt-14 grid gap-6 sm:grid-cols-3">
+            <div className="mt-14 grid gap-6 sm:grid-cols-4">
               {[
                 {
-                  step: "1",
-                  title: "Discovery call",
-                  desc: "15 minutes. We learn your business, your callers, your booking process.",
+                  letter: "C",
+                  title: "Capture",
+                  desc: "Every call, lead, and enquiry. 24/7. No exceptions.",
                 },
                 {
-                  step: "2",
-                  title: "We build your agent",
-                  desc: "Custom AI receptionist trained on your business. Ready in 5 days.",
+                  letter: "O",
+                  title: "Optimise",
+                  desc: "Follow-up, scheduling, admin. On autopilot.",
                 },
                 {
-                  step: "3",
-                  title: "Live on your phones",
-                  desc: "Calls forwarded to your AI. You get texts with qualified leads.",
+                  letter: "R",
+                  title: "Recover",
+                  desc: "Find and plug revenue leaks. £ figures, not guesses.",
+                },
+                {
+                  letter: "E",
+                  title: "Expand",
+                  desc: "Scale without headcount. AI employees, not hires.",
                 },
               ].map((item) => (
                 <div
-                  key={item.step}
-                  className="group rounded-2xl border border-white/5 bg-[--color-surface] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[--color-accent]/30 hover:shadow-lg hover:shadow-[--color-accent]/5 sm:p-10"
+                  key={item.letter}
+                  className="group rounded-2xl border border-gray-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[--color-accent]/30 hover:shadow-lg hover:shadow-[--color-accent]/5 sm:p-10"
                 >
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[--color-accent]/10 text-lg font-bold text-[--color-accent] transition group-hover:bg-[--color-accent] group-hover:text-white">
-                    {item.step}
+                    {item.letter}
                   </div>
-                  <h3 className="mt-5 text-lg font-semibold">{item.title}</h3>
+                  <h3 className="mt-5 text-lg font-semibold text-[--color-primary]">{item.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-[--color-muted]">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </ScrollFade>
+
+      {/* Two Paths */}
+      <ScrollFade>
+        <section className="py-24 bg-white">
+          <div className="mx-auto max-w-6xl px-4">
+            <h2 className="text-center font-bold text-3xl tracking-tight text-[--color-primary] sm:text-4xl">
+              Two Ways to Find Your Revenue Leaks
+            </h2>
+            <div className="mt-14 grid gap-8 lg:grid-cols-2">
+              {/* Free Path */}
+              <div className="rounded-3xl border border-[--color-accent]/30 bg-gradient-to-br from-[--color-accent]/5 to-white p-8 shadow-lg sm:p-12">
+                <div className="text-center">
+                  <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[--color-accent]/30 bg-[--color-accent]/10 px-4 py-1.5 text-sm text-[--color-accent]">
+                    <span>🆓</span>
+                    <span>Not Sure Where to Start?</span>
+                  </div>
+                  
+                  <h3 className="font-bold text-2xl text-[--color-primary] tracking-tight">
+                    Free AI Readiness Audit
+                  </h3>
+                  
+                  <ul className="mx-auto mt-4 max-w-xs space-y-2 text-left text-sm text-[--color-text]">
+                    <li>• 10-minute online assessment</li>
+                    <li>• Auto-generated readiness score</li>
+                    <li>• 3 quick wins you can do today</li>
+                    <li>• No call required</li>
+                  </ul>
+                  
+                  <div className="mt-6">
+                    <Link
+                      href="/audit"
+                      className="inline-block rounded-full bg-[--color-accent] px-8 py-3 font-semibold text-white shadow-lg shadow-[--color-accent]/30 transition-all duration-300 hover:scale-105 hover:bg-[--color-accent-hover] hover:shadow-xl hover:shadow-[--color-accent]/40"
+                    >
+                      Take the Free Audit →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Paid Path */}
+              <div className="rounded-3xl border border-[--color-primary]/30 bg-gradient-to-br from-[--color-primary]/5 to-white p-8 shadow-lg sm:p-12">
+                <div className="text-center">
+                  <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[--color-primary]/30 bg-[--color-primary]/10 px-4 py-1.5 text-sm text-[--color-primary]">
+                    <span>💰</span>
+                    <span>Know You&rsquo;re Losing Money?</span>
+                  </div>
+                  
+                  <h3 className="font-bold text-2xl text-[--color-primary] tracking-tight">
+                    Revenue Recovery Audit
+                  </h3>
+                  
+                  <ul className="mx-auto mt-4 max-w-xs space-y-2 text-left text-sm text-[--color-text]">
+                    <li>• 60-90 min deep dive with Manny</li>
+                    <li>• ACCA-grade P&L analysis</li>
+                    <li>• Exact £ figures on every leak</li>
+                    <li>• Professional report in 48hrs</li>
+                  </ul>
+                  
+                  <div className="mt-6">
+                    <Link
+                      href="/revenue-recovery"
+                      className="inline-block rounded-full bg-[--color-primary] px-8 py-3 font-semibold text-white shadow-lg shadow-[--color-primary]/30 transition-all duration-300 hover:scale-105 hover:bg-[--color-primary]/90 hover:shadow-xl hover:shadow-[--color-primary]/40"
+                    >
+                      Book for £297 →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollFade>
+
+      {/* Audit Results - Proof Stack */}
+      <ScrollFade>
+        <section className="py-24 bg-[--color-surface]">
+          <div className="mx-auto max-w-6xl px-4">
+            <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-[--color-accent]">
+              Proof
+            </p>
+            <h2 className="mt-4 text-center font-bold text-3xl tracking-tight text-[--color-primary] sm:text-4xl">
+              What We&rsquo;ve Found & Fixed
+            </h2>
+            <p className="mt-4 text-center text-[--color-muted]">
+              4 Businesses. 4 Industries. 3 Countries.
+            </p>
+            <div className="mt-14 grid gap-6 sm:grid-cols-2">
+              {[
+                {
+                  name: "Eliezer — Auto Detailing, Tampa FL",
+                  audit: "Missing every DM enquiry, no booking system, manual follow-up losing leads",
+                  deployed: "AI employee on Meta Messenger + Google Sheets booking pipeline",
+                  result: "\"It's turned into a must-have now\" — paying client",
+                },
+                {
+                  name: "Nana — SEN Consulting, London",
+                  audit: "Admin overload, client comms falling through cracks, scheduling chaos",
+                  deployed: "AI assistant handling daily comms, scheduling, and Google Workspace integration",
+                  result: "Most active daily user — uses it every single day",
+                },
+                {
+                  name: "Trinity — Care Agency (55 Staff), London",
+                  audit: "Missed calls, no carer dispatch tracking, CQC compliance gaps",
+                  deployed: "AI receptionist + KPI dashboard + staff communication automation",
+                  result: "Enterprise-scale pilot covering 55 carers and 48 clients",
+                },
+                {
+                  name: "Abi — Events & Decor, London",
+                  audit: "Booking enquiries going unanswered evenings and weekends",
+                  deployed: "24/7 AI bot handling booking enquiries",
+                  result: "Deployed and running — zero missed enquiries",
+                },
+              ].map((item) => (
+                <div
+                  key={item.name}
+                  className="group rounded-2xl border border-gray-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[--color-accent]/30 hover:shadow-lg hover:shadow-[--color-accent]/5"
+                >
+                  <h3 className="font-semibold text-lg text-[--color-primary]">{item.name}</h3>
+                  
+                  <div className="mt-4 space-y-3 text-sm">
+                    <div>
+                      <span className="font-medium text-red-600">AUDIT FOUND:</span>
+                      <p className="mt-1 text-[--color-text]">{item.audit}</p>
+                    </div>
+                    
+                    <div>
+                      <span className="font-medium text-blue-600">WE DEPLOYED:</span>
+                      <p className="mt-1 text-[--color-text]">{item.deployed}</p>
+                    </div>
+                    
+                    <div>
+                      <span className="font-medium text-green-600">RESULT:</span>
+                      <p className="mt-1 text-[--color-text]">{item.result}</p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
             <div className="mt-12 text-center">
               <Link
-                href="/book-demo"
+                href="/proof"
                 className="rounded-full bg-[--color-accent] px-6 py-3 font-medium text-white shadow-lg shadow-[--color-accent]/25 transition hover:bg-[--color-accent-hover]"
               >
-                Book your discovery call →
+                See Full Audit Results →
               </Link>
             </div>
           </div>
         </section>
       </ScrollFade>
 
-      {/* Use Cases */}
+      {/* Builder section */}
       <ScrollFade>
-        <section className="py-24">
-          <div className="mx-auto max-w-6xl px-4">
-            <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-[--color-accent]">
-              Use Cases
-            </p>
-            <h2 className="mt-4 text-center font-[family-name:var(--font-playfair)] text-3xl font-bold tracking-tight sm:text-4xl">
-              AI automation for every business function
-            </h2>
-            <div className="mt-14 grid gap-6 sm:grid-cols-3">
-              {[
-                {
-                  title: "Voice AI",
-                  desc: "Answer every call, qualify leads, book appointments. Your AI receptionist never sleeps.",
-                  href: "/services/ai-receptionist",
-                },
-                {
-                  title: "Workflow Automation",
-                  desc: "Connect your tools, automate repetitive tasks, eliminate manual data entry.",
-                  href: "/services/workflow-automation",
-                },
-                {
-                  title: "SecondYou",
-                  desc: "Your complete AI employee. Done-for-you setup, managed service, white-glove support.",
-                  href: "/secondyou",
-                },
-              ].map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="group rounded-2xl border border-white/5 bg-[--color-surface] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[--color-accent]/30 hover:shadow-lg hover:shadow-[--color-accent]/5 sm:p-10"
-                >
-                  <h3 className="text-lg font-semibold transition group-hover:text-[--color-accent]">
-                    {item.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-[--color-muted]">{item.desc}</p>
-                  <p className="mt-5 text-sm font-medium text-[--color-accent]">Learn more →</p>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      </ScrollFade>
-
-      {/* Founder */}
-      <ScrollFade>
-        <section className="py-24">
+        <section className="py-24 bg-white">
           <div className="mx-auto flex max-w-6xl flex-col items-center gap-10 px-4 md:flex-row md:gap-16">
             <div className="shrink-0">
               <Image
@@ -237,20 +319,22 @@ export default function Home() {
             </div>
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[--color-accent]">
-                Your builder
+                Built by an Accountant. Not a Coder.
               </p>
-              <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-2xl font-bold sm:text-3xl">
-                I build every system myself. No outsourcing.
+              <h2 className="mt-4 font-bold text-2xl text-[--color-primary] sm:text-3xl">
+                Most AI consultants are coders who learned business. I&rsquo;m an ACCA-qualified accountant who learned AI.
               </h2>
-              <p className="mt-4 leading-relaxed text-[--color-muted]">
-                I&rsquo;m Manny. 15 years in finance at Visa and the UK Cabinet Office.
-                ACCA qualified accountant. I became one to understand how businesses
-                actually work — the numbers, the operations, the bottlenecks.
+              <p className="mt-4 leading-relaxed text-[--color-text]">
+                I don&rsquo;t sell you tech — I show you the ROI first, then build the system that delivers it. 
+                Every automation gets measured in £ recovered or £ saved.
               </p>
-              <p className="mt-4 leading-relaxed text-[--color-muted]">
-                Now I build AI automation systems that solve the problems I kept seeing:
-                missed opportunities, manual admin, inefficient processes. You work directly
-                with me. No juniors, no offshore teams, no runaround.
+              <p className="mt-4 leading-relaxed text-[--color-text]">
+                15 years in finance at Visa Europe and the UK Cabinet Office taught me how businesses 
+                actually work — the numbers, the operations, the bottlenecks. Now I build AI that fixes them.
+              </p>
+              <p className="mt-4 font-medium text-[--color-primary]">
+                — Manny Amoah, ACCA<br />
+                Former Visa Europe & UK Cabinet Office
               </p>
               <Link
                 href="/about"
@@ -263,44 +347,24 @@ export default function Home() {
         </section>
       </ScrollFade>
 
-      {/* Lead Magnet - AI Audit Framework */}
+      {/* Testimonial */}
       <ScrollFade>
-        <section className="relative overflow-hidden py-24">
-          {/* Background gradient */}
-          <div className="pointer-events-none absolute inset-0">
-            <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[--color-accent]/5 blur-[120px]" />
-          </div>
-          
-          <div className="relative mx-auto max-w-3xl px-4">
-            <div className="rounded-3xl border border-[--color-accent]/30 bg-gradient-to-br from-[--color-surface] to-[--color-accent]/5 p-8 shadow-2xl shadow-[--color-accent]/10 sm:p-12">
-              <div className="text-center">
-                <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[--color-accent]/30 bg-[--color-accent]/10 px-4 py-1.5 text-sm text-[--color-accent]">
-                  <span>📊</span>
-                  <span>Free Resource</span>
-                </div>
-                
-                <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-bold tracking-tight sm:text-4xl">
-                  Free Guide: The AI Audit Framework
-                </h2>
-                
-                <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-[--color-muted]">
-                  How to find £20-50K in hidden costs in any small business. 
-                  Written by an ACCA-qualified automation consultant.
-                </p>
-                
-                <div className="mt-8">
-                  <a
-                    href="https://mannycorea.gumroad.com/l/ai-audit-framework"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block rounded-full bg-[--color-accent] px-10 py-4 text-lg font-semibold text-white shadow-xl shadow-[--color-accent]/30 transition-all duration-300 hover:scale-105 hover:bg-[--color-accent-hover] hover:shadow-2xl hover:shadow-[--color-accent]/40"
-                  >
-                    Get the Free Guide →
-                  </a>
-                </div>
-                
-                <p className="mt-6 text-sm text-[--color-muted]/70">
-                  No spam. Instant download. Actionable insights in under 20 pages.
+        <section className="py-24 bg-[--color-surface]">
+          <div className="mx-auto max-w-4xl px-4">
+            <div className="rounded-3xl border border-yellow-200 bg-yellow-50 p-8 text-center sm:p-12">
+              <div className="mb-4 flex justify-center text-yellow-500">
+                <span className="text-2xl">★★★★★</span>
+              </div>
+              <blockquote className="text-lg leading-relaxed text-[--color-text] sm:text-xl">
+                &ldquo;Truly exceptional — Manny did everything we needed and more. 
+                Excellent communication throughout and an incredible workflow produced in a quick timeframe. 
+                It&rsquo;s quite clear Manny has a solid commercial understanding which is imperative to work like this.&rdquo;
+              </blockquote>
+              <div className="mt-6">
+                <p className="font-semibold text-[--color-primary]">Luke Finney</p>
+                <p className="text-sm text-[--color-muted]">Founder & CEO, Manchester UK</p>
+                <p className="mt-2 text-xs text-[--color-muted]">
+                  ✅ Verified on Upwork · $101K+ spent · 4.9★
                 </p>
               </div>
             </div>
@@ -308,64 +372,41 @@ export default function Home() {
         </section>
       </ScrollFade>
 
-      {/* Pricing preview */}
+      {/* Final CTA */}
       <ScrollFade>
-        <section className="py-24">
-          <div className="mx-auto max-w-4xl px-4 text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[--color-accent]">
-              Pricing
-            </p>
-            <h2 className="mt-4 font-[family-name:var(--font-playfair)] text-3xl font-bold tracking-tight sm:text-4xl">
-              Pricing that pays for itself
+        <section className="relative overflow-hidden py-24 bg-white">
+          {/* Background gradient */}
+          <div className="pointer-events-none absolute inset-0">
+            <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[--color-accent]/5 blur-[120px]" />
+          </div>
+          
+          <div className="relative mx-auto max-w-4xl px-4 text-center">
+            <h2 className="font-bold text-3xl tracking-tight text-[--color-primary] sm:text-4xl">
+              Ready to Find Your Revenue Leaks?
             </h2>
-            <p className="mt-4 text-[--color-muted]">
-              Every missed opportunity costs you. Our AI employees work 24/7 
-              for less than a part-time hire.
-            </p>
-            <div className="mt-12 grid gap-6 sm:grid-cols-3">
-              {[
-                { name: "AI Receptionist", price: "£497", period: "/mo" },
-                { name: "Receptionist + Dispatch", price: "£997", period: "/mo", popular: true },
-                { name: "Full AI Ops", price: "£1,997", period: "/mo" },
-              ].map((tier) => (
-                <div
-                  key={tier.name}
-                  className={`rounded-2xl border p-8 transition-all duration-300 hover:-translate-y-1 ${
-                    tier.popular
-                      ? "border-[--color-accent]/40 bg-[--color-accent]/5 shadow-lg shadow-[--color-accent]/10"
-                      : "border-white/5 bg-[--color-surface] hover:border-[--color-accent]/20"
-                  }`}
-                >
-                  {tier.popular && (
-                    <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-[--color-accent]">
-                      Most popular
-                    </p>
-                  )}
-                  <h3 className="font-semibold">{tier.name}</h3>
-                  <p className="mt-3">
-                    <span className="text-3xl font-bold">{tier.price}</span>
-                    <span className="text-[--color-muted]">{tier.period}</span>
-                  </p>
-                </div>
-              ))}
+            
+            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <Link
+                href="/audit"
+                className="rounded-full bg-[--color-accent] px-8 py-3.5 font-medium text-white shadow-lg shadow-[--color-accent]/25 transition hover:bg-[--color-accent-hover] hover:shadow-xl hover:shadow-[--color-accent]/30"
+              >
+                Get Your Free AI Readiness Score →
+              </Link>
+              <Link
+                href="/revenue-recovery"
+                className="rounded-full border border-[--color-primary] bg-[--color-primary] px-8 py-3.5 font-medium text-white shadow-lg transition hover:bg-[--color-primary]/90"
+              >
+                Book Revenue Recovery Audit — £297 →
+              </Link>
             </div>
-            <Link
-              href="/pricing"
-              className="mt-10 inline-block text-sm font-medium text-[--color-accent] hover:underline"
-            >
-              See full pricing breakdown →
-            </Link>
+            
+            <p className="mt-8 text-sm text-[--color-muted]">
+              Founding member pricing available for first 10 implementation clients.<br />
+              £0 setup + £297/mo. Pay after 30 days of proven results.
+            </p>
           </div>
         </section>
       </ScrollFade>
-
-      {/* Testimonial */}
-      <ScrollFade>
-        <Testimonial />
-      </ScrollFade>
-
-      {/* CTA */}
-      <CTA />
     </>
   );
 }

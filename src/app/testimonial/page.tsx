@@ -137,7 +137,7 @@ ${formData.anythingElse || "N/A"}
   }
 
   return (
-    <div className="min-h-screen bg-[#0e0e10] text-white">
+    <div className="min-h-screen bg-white text-[--color-text] pt-24">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:py-24">
         {/* Header */}
         <div className="mb-12 text-center">
@@ -155,7 +155,7 @@ ${formData.anythingElse || "N/A"}
 
         {/* Form Card */}
         <form onSubmit={handleSubmitEmail} className="mx-auto max-w-3xl">
-          <div className="rounded-xl border border-[--color-border] bg-[--color-surface] p-6 sm:p-8">
+          <div className="rounded-xl border border-gray-200 bg-[--color-surface] p-6 sm:p-8">
             <div className="space-y-6">
               {/* Name */}
               <div>

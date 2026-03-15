@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function OpenClawPage() {
   return (
-    <main className="min-h-screen bg-[#0e0e10] text-white">
+    <main className="min-h-screen bg-white text-[--color-text] pt-24">
       {/* Hero Section */}
       <section className="relative overflow-hidden px-4 py-20 sm:py-32">
         {/* Decorative gradient blobs */}

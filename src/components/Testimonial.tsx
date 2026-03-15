@@ -1,10 +1,10 @@
 export function Testimonial() {
   return (
-    <section className="border-t border-white/5">
+    <section className="border-t border-gray-200">
       <div className="mx-auto max-w-4xl px-4 py-20">
-        <div className="rounded-2xl border border-white/5 bg-[--color-surface] p-8 sm:p-12">
-          <div className="text-2xl text-yellow-400">★★★★★</div>
-          <blockquote className="mt-6 text-lg leading-relaxed text-gray-300 sm:text-xl">
+        <div className="rounded-2xl border border-yellow-200 bg-yellow-50 p-8 sm:p-12">
+          <div className="text-2xl text-yellow-500">★★★★★</div>
+          <blockquote className="mt-6 text-lg leading-relaxed text-[--color-text] sm:text-xl">
             &ldquo;Truly exceptional — Manny did everything we needed and more.
             Excellent communication throughout and an incredible workflow
             produced in a quick timeframe. It&rsquo;s quite clear Manny has a
@@ -12,7 +12,7 @@ export function Testimonial() {
             this.&rdquo;
           </blockquote>
           <div className="mt-8">
-            <p className="font-semibold">Luke Finney</p>
+            <p className="font-semibold text-[--color-primary]">Luke Finney</p>
             <p className="text-sm text-[--color-muted]">
               Founder &amp; CEO — Manchester, UK
             </p>
@@ -21,28 +21,27 @@ export function Testimonial() {
             </p>
           </div>
           <div className="mt-4 flex flex-wrap gap-3">
-            <span className="rounded-full bg-green-900/40 px-3 py-1 text-xs text-green-400">
+            <span className="rounded-full bg-green-100 px-3 py-1 text-xs text-green-800">
               ✅ Verified on Upwork
             </span>
-            <span className="rounded-full bg-[--color-surface-light] px-3 py-1 text-xs text-[--color-muted]">
+            <span className="rounded-full bg-gray-100 px-3 py-1 text-xs text-[--color-muted]">
               $101K+ spent on platform · 141 hires · 4.9★ client rating
             </span>
           </div>
         </div>
 
         <div className="mt-8 rounded-2xl border border-[--color-accent]/20 bg-[--color-accent]/5 p-8 text-center">
-          <p className="font-semibold">
-            We&rsquo;re onboarding 10 founding members at launch pricing.
+          <p className="font-semibold text-[--color-primary]">
+            Founding member pricing available for first 10 implementation clients.
           </p>
           <p className="mt-2 text-sm text-[--color-muted]">
-            Be one of the first UK businesses to get a custom AI receptionist —
-            before we raise prices.
+            £0 setup + £297/mo. Pay after 30 days of proven results.
           </p>
           <a
             href="/book-demo"
             className="mt-4 inline-block rounded-full bg-[--color-accent] px-6 py-2.5 text-sm font-medium text-white transition hover:bg-[--color-accent-hover]"
           >
-            Book your 15-min demo →
+            Book your free audit →
           </a>
         </div>
       </div>

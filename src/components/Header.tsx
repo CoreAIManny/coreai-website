@@ -5,16 +5,10 @@ import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 
 const NAV = [
-  {
-    label: "Services",
-    children: [
-      { label: "Voice AI", href: "/services/ai-receptionist" },
-      { label: "Automation", href: "/services/workflow-automation" },
-      { label: "HireOnce", href: "/secondyou" },
-      { label: "OpenClaw", href: "/openclaw" },
-    ],
-  },
-  { label: "Case Studies", href: "/case-studies" },
+  { label: "Audit", href: "/audit" },
+  { label: "Solutions", href: "/solutions" },
+  { label: "Proof", href: "/proof" },
+  { label: "Pricing", href: "/pricing" },
   { label: "About", href: "/about" },
 ];
 
@@ -46,7 +40,7 @@ export function Header() {
         visible ? "translate-y-0 opacity-100" : "-translate-y-[calc(100%+2rem)] opacity-0"
       }`}
     >
-      <div className="rounded-2xl border border-white/10 bg-[#0C0C0C]/70 px-4 py-3 shadow-xl shadow-black/20 backdrop-blur-xl">
+      <div className="rounded-2xl border border-gray-200 bg-white/95 px-4 py-3 shadow-xl shadow-gray-900/10 backdrop-blur-xl">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <Image src="/logo.png" alt="Core AI Solutions" width={160} height={40} className="h-8 w-auto" priority />
@@ -54,57 +48,30 @@ export function Header() {
 
           {/* Desktop */}
           <nav className="hidden items-center gap-1 md:flex">
-            {NAV.map((item) =>
-              item.href ? (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  className="rounded-lg px-3 py-1.5 text-sm text-[--color-muted] transition hover:bg-white/5 hover:text-white"
-                >
-                  {item.label}
-                </Link>
-              ) : (
-                <div key={item.label} className="group relative">
-                  <button className="rounded-lg px-3 py-1.5 text-sm text-[--color-muted] transition hover:bg-white/5 hover:text-white">
-                    {item.label} <span className="text-xs">▾</span>
-                  </button>
-                  <div className="invisible absolute left-0 top-full pt-2 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100">
-                    <div className="rounded-xl border border-white/10 bg-[#131314]/95 p-1.5 shadow-xl backdrop-blur-xl">
-                      {item.children!.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          className="block rounded-lg px-4 py-2 text-sm text-[--color-muted] transition hover:bg-white/5 hover:text-white whitespace-nowrap"
-                        >
-                          {child.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              )
-            )}
+            {NAV.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="rounded-lg px-3 py-1.5 text-sm text-[--color-primary] transition hover:bg-gray-100 hover:text-[--color-accent]"
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
 
           <div className="hidden items-center gap-3 md:flex">
             <Link
-              href="/pricing"
-              className="rounded-lg px-3 py-1.5 text-sm text-[--color-muted] transition hover:text-white"
-            >
-              Pricing
-            </Link>
-            <Link
               href="/book-demo"
               className="rounded-full bg-[--color-accent] px-5 py-2 text-sm font-medium text-white transition hover:bg-[--color-accent-hover]"
             >
-              Book a Demo
+              Book Free Audit →
             </Link>
           </div>
 
           {/* Mobile toggle */}
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden text-white"
+            className="md:hidden text-[--color-primary]"
             aria-label="Menu"
           >
             {open ? (
@@ -117,41 +84,23 @@ export function Header() {
 
         {/* Mobile menu */}
         {open && (
-          <nav className="mt-3 border-t border-white/10 pt-3 md:hidden">
-            {NAV.map((item) =>
-              item.href ? (
-                <Link
-                  key={item.label}
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className="block rounded-lg px-3 py-2.5 text-[--color-muted] hover:bg-white/5 hover:text-white"
-                >
-                  {item.label}
-                </Link>
-              ) : (
-                <div key={item.label}>
-                  <span className="block px-3 py-2 text-xs font-semibold uppercase tracking-wider text-[--color-muted]/60">
-                    {item.label}
-                  </span>
-                  {item.children!.map((child) => (
-                    <Link
-                      key={child.href}
-                      href={child.href}
-                      onClick={() => setOpen(false)}
-                      className="block rounded-lg px-6 py-2 text-[--color-muted] hover:bg-white/5 hover:text-white"
-                    >
-                      {child.label}
-                    </Link>
-                  ))}
-                </div>
-              )
-            )}
+          <nav className="mt-3 border-t border-gray-200 pt-3 md:hidden">
+            {NAV.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className="block rounded-lg px-3 py-2.5 text-[--color-primary] hover:bg-gray-100 hover:text-[--color-accent]"
+              >
+                {item.label}
+              </Link>
+            ))}
             <Link
               href="/book-demo"
               onClick={() => setOpen(false)}
               className="mt-3 block rounded-full bg-[--color-accent] px-4 py-3 text-center font-medium text-white"
             >
-              Book a Demo
+              Book Free Audit →
             </Link>
           </nav>
         )}

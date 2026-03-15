@@ -1,146 +1,399 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CTA } from "@/components/CTA";
+import { ScrollFade } from "@/components/ScrollFade";
 
 export const metadata: Metadata = {
-  title: "Pricing",
-  description:
-    "AI receptionist pricing from £497/mo. Pays for itself if you miss just 3 calls a week. Transparent pricing, no hidden fees.",
+  title: "Pricing — Revenue Recovery Audit & AI Solutions | Core AI Solutions",
+  description: "Free AI Readiness Audit → £297 Revenue Recovery Audit → Implementation from £297/mo. Founding member pricing available. Transparent, ROI-focused pricing.",
 };
 
-const tiers = [
-  {
-    name: "AI Receptionist",
-    price: "£497",
-    desc: "Your phone gets answered. Every time.",
-    features: [
-      "24/7 AI call answering",
-      "Lead qualification questions",
-      "Appointment booking into your calendar",
-      "SMS summary after every call",
-      "Custom greeting & business hours",
-      "Monthly performance report",
-    ],
-  },
-  {
-    name: "Receptionist + Dispatch",
-    price: "£997",
-    desc: "Full call handling plus job dispatch and follow-up.",
-    popular: true,
-    features: [
-      "Everything in AI Receptionist",
-      "Job dispatch to your team",
-      "Automated follow-up messages",
-      "CRM integration (Jobber, Housecall Pro, etc.)",
-      "Multi-location support",
-      "Priority support",
-    ],
-  },
-  {
-    name: "Full AI Ops",
-    price: "£1,997",
-    desc: "Voice AI + workflow automation + CRM. The full stack.",
-    features: [
-      "Everything in Receptionist + Dispatch",
-      "Custom n8n workflow automation",
-      "Full CRM setup & integration",
-      "Lead nurture sequences",
-      "Custom reporting dashboard",
-      "Dedicated Slack/WhatsApp support",
-      "Quarterly strategy reviews",
-    ],
-  },
-];
-
-export default function Pricing() {
+export default function PricingPage() {
   return (
     <>
-      <section className="mx-auto max-w-6xl px-4 pb-20 pt-24">
-        <div className="mx-auto max-w-3xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-            Simple pricing. No surprises.
-          </h1>
-          <p className="mt-4 text-lg text-[--color-muted]">
-            Every plan pays for itself. Miss 5 calls a week at £200 per job?
-            That&rsquo;s £4,000/month walking out the door. Our AI costs a fraction of that.
-          </p>
-        </div>
-
-        <div className="mt-16 grid gap-8 sm:grid-cols-3">
-          {tiers.map((tier) => (
-            <div
-              key={tier.name}
-              className={`flex flex-col rounded-2xl border p-8 ${
-                tier.popular
-                  ? "border-[--color-accent] bg-[--color-accent]/5"
-                  : "border-[--color-border] bg-[--color-surface]"
-              }`}
-            >
-              {tier.popular && (
-                <p className="mb-2 text-xs font-semibold uppercase text-[--color-accent]">
-                  Most popular
-                </p>
-              )}
-              <h2 className="text-xl font-bold">{tier.name}</h2>
-              <p className="mt-2 text-sm text-[--color-muted]">{tier.desc}</p>
-              <p className="mt-6">
-                <span className="text-4xl font-bold">{tier.price}</span>
-                <span className="text-[--color-muted]">/mo</span>
-              </p>
-              <ul className="mt-8 flex-1 space-y-3 text-sm">
-                {tier.features.map((f) => (
-                  <li key={f} className="flex gap-2 text-[--color-muted]">
-                    <span className="text-green-400">✓</span> {f}
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href="/book-demo"
-                className={`mt-8 block rounded-full py-3 text-center font-medium transition ${
-                  tier.popular
-                    ? "bg-[--color-accent] text-white hover:bg-[--color-accent-hover]"
-                    : "border border-[--color-border] text-white hover:border-white"
-                }`}
-              >
-                Book a demo →
-              </Link>
-            </div>
-          ))}
-        </div>
-
-        {/* ROI Calculator */}
-        <div className="mx-auto mt-20 max-w-2xl rounded-2xl border border-[--color-border] bg-[--color-surface] p-8 sm:p-12">
-          <h2 className="text-2xl font-bold">Quick ROI check</h2>
-          <div className="mt-6 space-y-4 text-[--color-muted]">
-            <div className="flex justify-between border-b border-[--color-border] pb-4">
-              <span>Missed calls per week</span>
-              <span className="font-semibold text-white">5</span>
-            </div>
-            <div className="flex justify-between border-b border-[--color-border] pb-4">
-              <span>Average job value</span>
-              <span className="font-semibold text-white">£200</span>
-            </div>
-            <div className="flex justify-between border-b border-[--color-border] pb-4">
-              <span>Monthly revenue lost</span>
-              <span className="font-semibold text-red-400">£4,000</span>
-            </div>
-            <div className="flex justify-between border-b border-[--color-border] pb-4">
-              <span>AI Receptionist cost</span>
-              <span className="font-semibold text-green-400">£497</span>
-            </div>
-            <div className="flex justify-between pt-2">
-              <span className="font-semibold text-white">ROI</span>
-              <span className="font-bold text-green-400">8x return</span>
-            </div>
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-white pt-32">
+        <div className="mx-auto max-w-4xl px-4 pb-16">
+          <div className="text-center">
+            <h1 className="font-bold text-5xl tracking-tight text-[--color-primary] sm:text-6xl">
+              Pricing That Pays for Itself
+            </h1>
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-[--color-muted] sm:text-xl">
+              Start with a free audit to find your revenue leaks. Every solution is designed to recover more than it costs.
+            </p>
           </div>
-          <p className="mt-6 text-sm text-[--color-muted]">
-            Even if we only capture half those missed calls, you&rsquo;re still
-            getting a 4x return. The maths doesn&rsquo;t lie.
-          </p>
         </div>
       </section>
 
-      <CTA />
+      {/* Audit Pricing */}
+      <ScrollFade>
+        <section className="py-24 bg-[--color-surface]">
+          <div className="mx-auto max-w-6xl px-4">
+            <h2 className="text-center font-bold text-3xl text-[--color-primary] sm:text-4xl">
+              Find Your Revenue Leaks First
+            </h2>
+            <p className="mt-4 text-center text-[--color-muted]">
+              Two ways to discover exactly where your business is bleeding money
+            </p>
+            
+            <div className="mt-14 grid gap-8 lg:grid-cols-2">
+              {/* Free Audit */}
+              <div className="rounded-3xl border border-[--color-accent]/30 bg-gradient-to-br from-[--color-accent]/5 to-white p-8 shadow-lg sm:p-12">
+                <div className="text-center">
+                  <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[--color-accent]/30 bg-[--color-accent]/10 px-4 py-1.5 text-sm text-[--color-accent]">
+                    <span>🆓</span>
+                    <span>Free</span>
+                  </div>
+                  
+                  <h3 className="font-bold text-2xl text-[--color-primary] tracking-tight">
+                    AI Readiness Audit
+                  </h3>
+                  
+                  <div className="my-6">
+                    <div className="text-4xl font-bold text-[--color-primary]">£0</div>
+                    <p className="text-sm text-[--color-muted]">Self-service assessment</p>
+                  </div>
+                  
+                  <ul className="space-y-3 text-left text-sm text-[--color-text]">
+                    <li className="flex gap-3"><span className="text-[--color-accent]">✓</span> 10-minute online assessment</li>
+                    <li className="flex gap-3"><span className="text-[--color-accent]">✓</span> Auto-generated readiness score</li>
+                    <li className="flex gap-3"><span className="text-[--color-accent]">✓</span> 3 quick wins you can implement today</li>
+                    <li className="flex gap-3"><span className="text-[--color-accent]">✓</span> Tailored recommendations</li>
+                    <li className="flex gap-3"><span className="text-[--color-accent]">✓</span> No call required</li>
+                  </ul>
+                  
+                  <div className="mt-8">
+                    <Link
+                      href="/audit"
+                      className="block rounded-full bg-[--color-accent] py-3 text-center font-semibold text-white shadow-lg transition hover:bg-[--color-accent-hover]"
+                    >
+                      Take Free Audit →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Paid Audit */}
+              <div className="rounded-3xl border border-[--color-primary]/30 bg-gradient-to-br from-[--color-primary]/5 to-white p-8 shadow-lg sm:p-12">
+                <div className="text-center">
+                  <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[--color-primary]/30 bg-[--color-primary]/10 px-4 py-1.5 text-sm text-[--color-primary]">
+                    <span>💰</span>
+                    <span>Professional Analysis</span>
+                  </div>
+                  
+                  <h3 className="font-bold text-2xl text-[--color-primary] tracking-tight">
+                    Revenue Recovery Audit
+                  </h3>
+                  
+                  <div className="my-6">
+                    <div className="text-4xl font-bold text-[--color-primary]">£297</div>
+                    <p className="text-sm text-[--color-muted]">One-off payment</p>
+                  </div>
+                  
+                  <ul className="space-y-3 text-left text-sm text-[--color-text]">
+                    <li className="flex gap-3"><span className="text-[--color-primary]">✓</span> 60-90 min deep dive with Manny</li>
+                    <li className="flex gap-3"><span className="text-[--color-primary]">✓</span> ACCA-grade P&L analysis</li>
+                    <li className="flex gap-3"><span className="text-[--color-primary]">✓</span> Exact £ figures on every leak</li>
+                    <li className="flex gap-3"><span className="text-[--color-primary]">✓</span> Professional report in 48hrs</li>
+                    <li className="flex gap-3"><span className="text-[--color-primary]">✓</span> ROI projections & implementation roadmap</li>
+                  </ul>
+                  
+                  <div className="mt-8">
+                    <Link
+                      href="/revenue-recovery"
+                      className="block rounded-full bg-[--color-primary] py-3 text-center font-semibold text-white shadow-lg transition hover:bg-[--color-primary]/90"
+                    >
+                      Book for £297 →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-12 text-center">
+              <div className="inline-flex items-center gap-2 rounded-full border border-yellow-300 bg-yellow-50 px-6 py-3">
+                <span className="text-2xl">⚡</span>
+                <span className="font-semibold text-yellow-800">
+                  Revenue Recovery Guarantee: Find £1,000+/month in leaks or full refund
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollFade>
+
+      {/* Implementation Pricing */}
+      <ScrollFade>
+        <section className="py-24 bg-white">
+          <div className="mx-auto max-w-6xl px-4">
+            <h2 className="text-center font-bold text-3xl text-[--color-primary] sm:text-4xl">
+              Implementation & Ongoing Solutions
+            </h2>
+            <p className="mt-4 text-center text-[--color-muted]">
+              After your audit, choose how to fix the revenue leaks we found
+            </p>
+            
+            <div className="mt-14 grid gap-8 lg:grid-cols-2">
+              {/* Revenue Recovery Engine */}
+              <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-lg">
+                <div className="mb-6">
+                  <h3 className="font-bold text-2xl text-[--color-primary]">Revenue Recovery Engine</h3>
+                  <p className="mt-2 text-[--color-muted]">Complete AI automation to plug your revenue leaks</p>
+                </div>
+                
+                <div className="mb-6">
+                  <div className="flex items-baseline gap-2">
+                    <div className="text-3xl font-bold text-[--color-primary]">£297/mo</div>
+                    <div className="text-sm text-[--color-muted]">
+                      <span className="line-through">£497/mo</span> Founding Member
+                    </div>
+                  </div>
+                  <p className="text-sm text-green-600 font-medium">First 10 clients only • Pay after 30 days of results</p>
+                </div>
+                
+                <div className="mb-6">
+                  <h4 className="font-semibold text-lg text-[--color-primary] mb-3">What&rsquo;s Included</h4>
+                  <ul className="space-y-2 text-sm text-[--color-text]">
+                    <li className="flex gap-2"><span className="text-[--color-accent]">•</span> AI receptionist (Vapi) — custom voice, your scripts</li>
+                    <li className="flex gap-2"><span className="text-[--color-accent]">•</span> CRM automation workflows (n8n)</li>
+                    <li className="flex gap-2"><span className="text-[--color-accent]">•</span> Booking pipeline connected to your calendar</li>
+                    <li className="flex gap-2"><span className="text-[--color-accent]">•</span> Follow-up sequences for every lead type</li>
+                    <li className="flex gap-2"><span className="text-[--color-accent]">•</span> Review automation and referral triggers</li>
+                    <li className="flex gap-2"><span className="text-[--color-accent]">•</span> Weekly performance reports with £ metrics</li>
+                    <li className="flex gap-2"><span className="text-[--color-accent]">•</span> Ongoing optimization and support</li>
+                  </ul>
+                </div>
+                
+                <Link
+                  href="/book-demo"
+                  className="block rounded-full bg-[--color-accent] py-3 text-center font-semibold text-white shadow-lg transition hover:bg-[--color-accent-hover]"
+                >
+                  Secure Founding Member Pricing →
+                </Link>
+              </div>
+
+              {/* HireOnce */}
+              <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-lg">
+                <div className="mb-6">
+                  <h3 className="font-bold text-2xl text-[--color-primary]">HireOnce AI Employee</h3>
+                  <p className="mt-2 text-[--color-muted]">Your 24/7 AI employee — fully managed</p>
+                </div>
+                
+                <div className="mb-6">
+                  <div className="text-3xl font-bold text-[--color-primary]">£497/mo</div>
+                  <p className="text-sm text-[--color-muted]">All-inclusive • Setup + Management + Support</p>
+                </div>
+                
+                <div className="mb-6">
+                  <h4 className="font-semibold text-lg text-[--color-primary] mb-3">What Your AI Does</h4>
+                  <div className="grid gap-4 sm:grid-cols-2 text-xs text-[--color-text]">
+                    <div>
+                      <p className="font-medium text-[--color-accent] mb-1">Customer Comms</p>
+                      <ul className="space-y-1">
+                        <li>• Answer calls & messages</li>
+                        <li>• Book appointments</li>
+                        <li>• Handle support</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <p className="font-medium text-[--color-accent] mb-1">Admin & Operations</p>
+                      <ul className="space-y-1">
+                        <li>• Data entry</li>
+                        <li>• Invoice generation</li>
+                        <li>• Scheduling</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <p className="font-medium text-[--color-accent] mb-1">Sales Support</p>
+                      <ul className="space-y-1">
+                        <li>• Lead qualification</li>
+                        <li>• Quote follow-up</li>
+                        <li>• Pipeline management</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <p className="font-medium text-[--color-accent] mb-1">Intelligence</p>
+                      <ul className="space-y-1">
+                        <li>• Performance tracking</li>
+                        <li>• Market research</li>
+                        <li>• Process optimization</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mb-6 rounded-lg border border-blue-200 bg-blue-50 p-3">
+                  <p className="text-sm text-blue-800">
+                    <strong>Fully Managed:</strong> We handle setup, training, monitoring, and optimization. 
+                    You just tell it what to do.
+                  </p>
+                </div>
+                
+                <Link
+                  href="/book-demo"
+                  className="block rounded-full bg-[--color-primary] py-3 text-center font-semibold text-white shadow-lg transition hover:bg-[--color-primary]/90"
+                >
+                  Hire Your AI Employee →
+                </Link>
+              </div>
+            </div>
+            
+            <div className="mt-12 text-center">
+              <p className="text-sm text-[--color-muted]">
+                Both solutions include setup, training, integration, and ongoing support. 
+                <br />No hidden fees. No lock-in contracts. Cancel anytime.
+              </p>
+            </div>
+          </div>
+        </section>
+      </ScrollFade>
+
+      {/* ROI Calculator */}
+      <ScrollFade>
+        <section className="py-24 bg-[--color-surface]">
+          <div className="mx-auto max-w-4xl px-4">
+            <h2 className="text-center font-bold text-3xl text-[--color-primary] sm:text-4xl">
+              ROI Calculator
+            </h2>
+            <p className="mt-4 text-center text-[--color-muted]">
+              See how quickly our solutions pay for themselves
+            </p>
+            
+            <div className="mt-12 grid gap-8 sm:grid-cols-2">
+              {/* Scenario 1 */}
+              <div className="rounded-2xl border border-gray-200 bg-white p-6">
+                <h3 className="font-bold text-lg text-[--color-primary] mb-4">Conservative Scenario</h3>
+                <div className="space-y-3 text-sm">
+                  <div className="flex justify-between">
+                    <span>Missed calls per week:</span>
+                    <span className="font-semibold">3</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Average job value:</span>
+                    <span className="font-semibold">£150</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Monthly revenue lost:</span>
+                    <span className="font-semibold text-red-600">£1,800</span>
+                  </div>
+                  <div className="flex justify-between border-t border-gray-200 pt-3">
+                    <span>Revenue Recovery Engine:</span>
+                    <span className="font-semibold text-green-600">£297/mo</span>
+                  </div>
+                  <div className="flex justify-between font-bold text-lg">
+                    <span>ROI:</span>
+                    <span className="text-green-600">6x return</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Scenario 2 */}
+              <div className="rounded-2xl border border-gray-200 bg-white p-6">
+                <h3 className="font-bold text-lg text-[--color-primary] mb-4">Typical Scenario</h3>
+                <div className="space-y-3 text-sm">
+                  <div className="flex justify-between">
+                    <span>Missed calls per week:</span>
+                    <span className="font-semibold">5</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Average job value:</span>
+                    <span className="font-semibold">£250</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Monthly revenue lost:</span>
+                    <span className="font-semibold text-red-600">£5,000</span>
+                  </div>
+                  <div className="flex justify-between border-t border-gray-200 pt-3">
+                    <span>HireOnce AI Employee:</span>
+                    <span className="font-semibold text-green-600">£497/mo</span>
+                  </div>
+                  <div className="flex justify-between font-bold text-lg">
+                    <span>ROI:</span>
+                    <span className="text-green-600">10x return</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-8 text-center">
+              <div className="inline-flex items-center gap-2 rounded-full border border-green-200 bg-green-50 px-6 py-3">
+                <span className="text-2xl">💡</span>
+                <span className="font-semibold text-green-800">
+                  Even capturing just 50% of missed opportunities pays for the entire system
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollFade>
+
+      {/* Pricing Philosophy */}
+      <ScrollFade>
+        <section className="py-24 bg-white">
+          <div className="mx-auto max-w-4xl px-4 text-center">
+            <h2 className="font-bold text-3xl text-[--color-primary] sm:text-4xl">
+              Our Pricing Philosophy
+            </h2>
+            <p className="mt-6 text-lg text-[--color-muted]">
+              Every price point is designed to deliver immediate, measurable ROI. No vanity metrics. Just recovered revenue.
+            </p>
+            
+            <div className="mt-12 grid gap-8 sm:grid-cols-3">
+              {[
+                {
+                  principle: "ROI-First",
+                  desc: "Every solution must recover more revenue than it costs. If it doesn't pay for itself, we don't offer it.",
+                  icon: "💰",
+                },
+                {
+                  principle: "Transparent",
+                  desc: "No hidden fees, no surprise charges, no price increases for the first year. What you see is what you pay.",
+                  icon: "🔍",
+                },
+                {
+                  principle: "Risk-Free",
+                  desc: "30-day money-back guarantee. If you don't see results, you don't pay. Simple as that.",
+                  icon: "🛡️",
+                },
+              ].map((item) => (
+                <div key={item.principle} className="text-center">
+                  <div className="text-4xl">{item.icon}</div>
+                  <h3 className="mt-4 font-bold text-lg text-[--color-primary]">{item.principle}</h3>
+                  <p className="mt-2 text-sm text-[--color-muted]">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </ScrollFade>
+
+      {/* CTA */}
+      <ScrollFade>
+        <section className="py-24 bg-[--color-surface]">
+          <div className="mx-auto max-w-4xl px-4 text-center">
+            <h2 className="font-bold text-3xl text-[--color-primary] sm:text-4xl">
+              Start with Your Free Audit
+            </h2>
+            <p className="mt-6 text-lg text-[--color-muted]">
+              Find out exactly where your business is bleeding money. Then decide how to fix it.
+            </p>
+            
+            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <Link
+                href="/audit"
+                className="rounded-full bg-[--color-accent] px-8 py-3.5 font-medium text-white shadow-lg shadow-[--color-accent]/25 transition hover:bg-[--color-accent-hover]"
+              >
+                Get Free AI Readiness Audit →
+              </Link>
+              <Link
+                href="/revenue-recovery"
+                className="rounded-full border border-[--color-primary] bg-[--color-primary] px-8 py-3.5 font-medium text-white shadow-lg transition hover:bg-[--color-primary]/90"
+              >
+                Book Revenue Recovery Audit — £297 →
+              </Link>
+            </div>
+          </div>
+        </section>
+      </ScrollFade>
     </>
   );
 }
