@@ -194,7 +194,7 @@ export default function AuditForm({ onComplete }: AuditFormProps) {
     const { overallScore, scoreBand } = calculateScore();
 
     // Send to Google Sheets in the background (don't block UI)
-    if (GOOGLE_APPS_SCRIPT_URL !== "YOUR_APPS_SCRIPT_URL_HERE") {
+    if (GOOGLE_APPS_SCRIPT_URL) {
       const payload = {
         name: formData.name,
         email: formData.email,
