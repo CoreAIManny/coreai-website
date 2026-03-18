@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 // TODO: Replace with actual Google Apps Script URL after deployment
-const GOOGLE_APPS_SCRIPT_URL = "YOUR_APPS_SCRIPT_URL_HERE";
+const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwCb0jjHWt14pl06S8nG7kCWrOlqgwKycxYj2Kwt_P1KTvT2psU7IYPtmLlzaVXCoCy/exec";
 
 interface FormData {
   businessName: string;
