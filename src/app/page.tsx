@@ -373,6 +373,71 @@ export default function Home() {
         </section>
       </ScrollFade>
 
+      {/* Free Resources */}
+      <ScrollFade>
+        <section className="py-24 bg-white">
+          <div className="mx-auto max-w-6xl px-4">
+            <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+              Free Resources
+            </p>
+            <h2 className="mt-4 text-center font-bold text-3xl tracking-tight text-primary sm:text-4xl">
+              Tools & Frameworks You Can Use Today
+            </h2>
+            <p className="mt-4 text-center text-muted">
+              Whether you work with me or not — these will help you start automating.
+            </p>
+
+            <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                {
+                  icon: "📊",
+                  title: "AI Audit Framework",
+                  desc: "The exact framework I use to find revenue leaks in small businesses.",
+                  tag: "Free Download",
+                  href: "https://core-ai-solutions.kit.com/319ad7952a",
+                },
+                {
+                  icon: "✅",
+                  title: "Lead Capture Checklist",
+                  desc: "Stop losing leads. A step-by-step checklist to qualify and convert faster.",
+                  tag: "Free Download",
+                  href: "https://mannycorea.gumroad.com/l/n8n_lead_qualifier_pack",
+                },
+                {
+                  icon: "🛠️",
+                  title: "AI Tools Database",
+                  desc: "The tools I actually use across 4 client deployments. No fluff.",
+                  tag: "Free Download",
+                  href: "https://mannycorea.gumroad.com/l/ai-tools-stack",
+                },
+                {
+                  icon: "📚",
+                  title: "Browse All Resources",
+                  desc: "Guides, templates, and automation packs for small business owners.",
+                  tag: "View Store",
+                  href: "https://mannycorea.gumroad.com/",
+                },
+              ].map((item) => (
+                <a
+                  key={item.title}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex flex-col items-center gap-3 rounded-2xl border border-gray-200 bg-surface p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5"
+                >
+                  <span className="text-3xl">{item.icon}</span>
+                  <h3 className="font-semibold text-lg text-primary">{item.title}</h3>
+                  <p className="text-sm leading-relaxed text-muted">{item.desc}</p>
+                  <span className="mt-auto inline-block rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent">
+                    {item.tag}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      </ScrollFade>
+
       {/* Final CTA */}
       <ScrollFade>
         <section className="relative overflow-hidden py-24 bg-white">

@@ -77,3 +77,18 @@ html {
   stroke-width: 2;
   stroke-linecap: round;
 }
+
+/* Form step animations */
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
