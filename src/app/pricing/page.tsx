@@ -91,7 +91,7 @@ export default function PricingPage() {
                   
                   <ul className="space-y-3 text-left text-sm text-text">
                     <li className="flex gap-3"><span className="text-primary">✓</span> 60-90 min deep dive with Manny</li>
-                    <li className="flex gap-3"><span className="text-primary">✓</span> ACCA-grade P&L analysis</li>
+                    <li className="flex gap-3"><span className="text-primary">✓</span> Enterprise-grade P&L analysis</li>
                     <li className="flex gap-3"><span className="text-primary">✓</span> Exact £ figures on every leak</li>
                     <li className="flex gap-3"><span className="text-primary">✓</span> Professional report in 48hrs</li>
                     <li className="flex gap-3"><span className="text-primary">✓</span> ROI projections & implementation roadmap</li>

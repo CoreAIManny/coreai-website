@@ -27,7 +27,7 @@ export default function Home() {
               Stop Losing Revenue to <span className="text-accent">Missed Calls</span>, Dead Leads & Manual Admin.
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted sm:text-xl">
-              Find out exactly where your business is bleeding money — and how AI can plug the leaks. ACCA-grade analysis with exact £ figures.
+              Find out exactly where your business is bleeding money — and how AI can plug the leaks. Enterprise-grade analysis with exact £ figures.
             </p>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link
@@ -46,7 +46,7 @@ export default function Home() {
 
             {/* Trust signal */}
             <div className="mt-8 flex items-center justify-center gap-6 text-sm text-muted">
-              <span className="flex items-center gap-1"><span className="text-accent">✓</span> ACCA-Qualified</span>
+              <span className="flex items-center gap-1"><span className="text-accent">✓</span> Enterprise-Trained</span>
               <span className="flex items-center gap-1"><span className="text-accent">✓</span> 4 Businesses Deployed</span>
               <span className="flex items-center gap-1"><span className="text-accent">✓</span> 3 Countries</span>
             </div>
@@ -61,7 +61,7 @@ export default function Home() {
           {[
             { value: "4 Businesses", label: "Deployed" },
             { value: "3 Countries", label: "Across" },
-            { value: "ACCA", label: "Qualified" },
+            { value: "Enterprise", label: "Background" },
           ].map((s) => (
             <div key={s.label} className="text-center">
               <div className="text-xl font-bold text-primary sm:text-2xl">{s.value}</div>
@@ -100,7 +100,7 @@ export default function Home() {
                 <li className="flex gap-3"><span className="text-green-500">✓</span> AI answers every call, 24/7</li>
                 <li className="flex gap-3"><span className="text-green-500">✓</span> Automated follow-up in minutes</li>
                 <li className="flex gap-3"><span className="text-green-500">✓</span> AI handles admin while you sleep</li>
-                <li className="flex gap-3"><span className="text-green-500">✓</span> ACCA-grade analysis shows exactly where</li>
+                <li className="flex gap-3"><span className="text-green-500">✓</span> Enterprise-grade analysis shows exactly where</li>
               </ul>
             </div>
           </div>
@@ -208,7 +208,7 @@ export default function Home() {
                   
                   <ul className="mx-auto mt-4 max-w-xs space-y-2 text-left text-sm text-text">
                     <li>• 60-90 min deep dive with Manny</li>
-                    <li>• ACCA-grade P&L analysis</li>
+                    <li>• Enterprise-grade P&L analysis</li>
                     <li>• Exact £ figures on every leak</li>
                     <li>• Professional report in 48hrs</li>
                   </ul>
@@ -323,7 +323,7 @@ export default function Home() {
                 Built by an Accountant. Not a Coder.
               </p>
               <h2 className="mt-4 font-bold text-2xl text-primary sm:text-3xl">
-                Most AI consultants are coders who learned business. I&rsquo;m an <span className="text-accent">ACCA-qualified accountant</span> who learned AI.
+                Most AI consultants are coders who learned business. I spent a decade in <span className="text-accent">enterprise finance</span> — Visa Europe, the Cabinet Office, UKHSA — then learned AI.
               </h2>
               <p className="mt-4 leading-relaxed text-text">
                 I don&rsquo;t sell you tech — I show you the ROI first, then build the system that delivers it. 
@@ -334,7 +334,7 @@ export default function Home() {
                 actually work — the numbers, the operations, the bottlenecks. Now I build AI that fixes them.
               </p>
               <p className="mt-4 font-medium text-primary">
-                — Manny Amoah, ACCA<br />
+                — Manny Amoah<br />
                 Former Visa Europe & UK Cabinet Office
               </p>
               <Link

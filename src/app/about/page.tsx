@@ -4,8 +4,8 @@ import Link from "next/link";
 import { ScrollFade } from "@/components/ScrollFade";
 
 export const metadata: Metadata = {
-  title: "About Manny Amoah — ACCA-Qualified AI Consultant",
-  description: "Meet Manny Amoah, ACCA-qualified accountant turned AI consultant. 15 years at Visa Europe and UK Cabinet Office. Industry-agnostic Revenue Recovery Audits.",
+  title: "About Manny Amoah — Enterprise-Trained AI Consultant",
+  description: "Meet Manny Amoah, enterprise finance veteran turned AI consultant. 15 years at Visa Europe and UK Cabinet Office. Industry-agnostic Revenue Recovery Audits.",
 };
 
 export default function AboutPage() {
@@ -19,7 +19,7 @@ export default function AboutPage() {
               Built by an Accountant. Not a Coder.
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted sm:text-xl">
-              Most AI consultants are coders who learned business. I&rsquo;m an ACCA-qualified accountant who learned AI.
+              Most AI consultants are coders who learned business. I spent a decade in enterprise finance — Visa Europe, the Cabinet Office, UKHSA — then learned AI.
             </p>
           </div>
         </div>
@@ -33,7 +33,7 @@ export default function AboutPage() {
               <div className="flex justify-center lg:justify-start">
                 <Image
                   src="/manny-headshot.png"
-                  alt="Manny Amoah — ACCA-Qualified AI Consultant"
+                  alt="Manny Amoah — Enterprise-Trained AI Consultant"
                   width={400}
                   height={400}
                   className="rounded-2xl"
@@ -41,15 +41,15 @@ export default function AboutPage() {
               </div>
               <div>
                 <h2 className="font-bold text-3xl text-primary sm:text-4xl">
-                  Manny Amoah, ACCA
+                  Manny Amoah
                 </h2>
                 <p className="mt-4 text-text leading-relaxed">
-                  I spent 15 years in the financial guts of major organisations — Visa Europe, UK Cabinet Office, 
-                  UK Health Security Agency. I&rsquo;ve seen how businesses actually work: the numbers, 
+                  I spent 15 years in the financial guts of major organisations — Visa Europe, UK Cabinet Office,
+                  UK Health Security Agency. I&rsquo;ve seen how businesses actually work: the numbers,
                   the operations, the bottlenecks that cost millions.
                 </p>
                 <p className="mt-4 text-text leading-relaxed">
-                  My ACCA qualification taught me to think in P&L terms. Every process has a cost. 
+                  A decade in enterprise finance taught me to think in P&L terms. Every process has a cost.
                   Every inefficiency bleeds money. Every automation needs ROI justification.
                 </p>
                 <p className="mt-4 text-text leading-relaxed">
@@ -59,7 +59,7 @@ export default function AboutPage() {
                 
                 <div className="mt-8 grid gap-4 sm:grid-cols-2">
                   {[
-                    { label: "Qualification", value: "ACCA" },
+                    { label: "Background", value: "Enterprise Finance" },
                     { label: "Experience", value: "15 years finance" },
                     { label: "Previous roles", value: "Visa Europe, UK Cabinet Office" },
                     { label: "Approach", value: "ROI before tech" },
@@ -78,12 +78,12 @@ export default function AboutPage() {
         </section>
       </ScrollFade>
 
-      {/* The ACCA Difference */}
+      {/* The Enterprise Experience Difference */}
       <ScrollFade>
         <section className="py-24 bg-white">
           <div className="mx-auto max-w-6xl px-4">
             <h2 className="text-center font-bold text-3xl text-primary sm:text-4xl">
-              Why ACCA Makes the Difference
+              Why Enterprise Experience Makes the Difference
             </h2>
             <p className="mt-6 text-center text-lg text-muted">
               Most AI consultants show you what&rsquo;s possible. I show you what&rsquo;s profitable.
@@ -253,7 +253,7 @@ export default function AboutPage() {
                 },
                 {
                   step: "2", 
-                  title: "ACCA-Grade Analysis",
+                  title: "Enterprise-Grade Analysis",
                   desc: "Every recommendation comes with £ figures, risk assessment, and ROI projections. Business case included.",
                 },
                 {
@@ -294,7 +294,7 @@ export default function AboutPage() {
                 &ldquo;To democratise enterprise-level operational efficiency. Every small business 
                 should have access to the same automation advantages that big corporations take for granted.&rdquo;
               </blockquote>
-              <p className="mt-6 font-semibold text-primary">— Manny Amoah, ACCA</p>
+              <p className="mt-6 font-semibold text-primary">— Manny Amoah</p>
             </div>
           </div>
         </section>
@@ -308,7 +308,7 @@ export default function AboutPage() {
               Ready to Find Your Revenue Leaks?
             </h2>
             <p className="mt-6 text-lg text-muted">
-              Let&rsquo;s apply ACCA-grade analysis to your business operations. Find out exactly where you&rsquo;re losing money.
+              Let&rsquo;s apply enterprise-grade analysis to your business operations. Find out exactly where you&rsquo;re losing money.
             </p>
             
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">

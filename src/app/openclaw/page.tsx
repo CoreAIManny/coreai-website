@@ -49,7 +49,7 @@ export default function OpenClawPage() {
 
           {/* Trust line */}
           <p className="text-center text-sm text-muted">
-            Manny Amoah, ACCA — 5 production instances serving businesses across 3 countries
+            Manny Amoah — 5 production instances serving businesses across 3 countries
           </p>
         </div>
       </section>

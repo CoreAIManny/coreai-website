@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Book Your Free AI Audit — Core AI Solutions",
   description:
-    "Book a free AI audit call with Manny (ACCA qualified). We'll review your workflows, identify revenue leaks, and deliver a report within 48 hours. No pitch, just insights.",
+    "Book a free AI audit call with Manny. We'll review your workflows, identify revenue leaks, and deliver a report within 48 hours. No pitch, just insights.",
 };
 
 export default function BookDemo() {
@@ -17,14 +17,14 @@ export default function BookDemo() {
           <div className="text-center">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 text-sm text-accent">
               <span>🆓</span>
-              <span>Free • No Pitch • ACCA-Qualified Analysis</span>
+              <span>Free • No Pitch • Enterprise-Grade Analysis</span>
             </div>
 
             <h1 className="font-bold text-5xl tracking-tight text-primary sm:text-6xl">
               Book Your Free AI Audit
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted sm:text-xl">
-              45-minute call with Manny (ACCA qualified). We&rsquo;ll review your workflows, identify revenue leaks, 
+              45-minute call with Manny. We&rsquo;ll review your workflows, identify revenue leaks, 
               and you&rsquo;ll get a professional report within 48 hours. No obligation.
             </p>
           </div>
@@ -48,7 +48,7 @@ export default function BookDemo() {
                 {
                   step: "2",
                   title: "Revenue Leak Identification",
-                  desc: "ACCA-trained analysis of where money is slipping through operational cracks.",
+                  desc: "Enterprise-trained analysis of where money is slipping through operational cracks.",
                 },
                 {
                   step: "3",
@@ -77,7 +77,7 @@ export default function BookDemo() {
         </section>
       </ScrollFade>
 
-      {/* ACCA Differentiator */}
+      {/* Enterprise Differentiator */}
       <ScrollFade>
         <section className="py-24 bg-white">
           <div className="mx-auto max-w-4xl px-4">
@@ -86,7 +86,7 @@ export default function BookDemo() {
                 Why This Audit Is Different
               </h2>
               <p className="mt-6 text-lg text-text">
-                Most AI consultants show you cool demos. I&rsquo;m ACCA-qualified — I show you the ROI first.
+                Most AI consultants show you cool demos. I show you the ROI first.
               </p>
               <div className="mt-8 grid gap-6 sm:grid-cols-3">
                 {[
@@ -163,7 +163,7 @@ export default function BookDemo() {
             <div className="mt-12 rounded-2xl border border-primary/20 bg-primary/5 p-8">
               <h3 className="font-bold text-xl text-primary">Revenue Recovery Audit — £297</h3>
               <ul className="mt-4 space-y-2 text-left text-sm text-text max-w-md mx-auto">
-                <li>• 90-minute deep dive with ACCA-grade analysis</li>
+                <li>• 90-minute deep dive with enterprise-grade analysis</li>
                 <li>• Exact £ figures attached to every revenue leak</li>
                 <li>• Professional Revenue Recovery Report within 48hrs</li>
                 <li>• ROI projections and priority implementation roadmap</li>

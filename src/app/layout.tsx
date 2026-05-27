@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | Core AI Solutions",
   },
   description:
-    "Stop losing revenue to missed calls, dead leads & manual admin. Free AI Readiness Audit + £297 Revenue Recovery Audit. ACCA-qualified consultant shows you the exact £ your business is bleeding.",
+    "Stop losing revenue to missed calls, dead leads & manual admin. Free AI Readiness Audit + £297 Revenue Recovery Audit. Enterprise-trained consultant shows you the exact £ your business is bleeding.",
   keywords: [
     "revenue recovery audit",
     "AI audit for business",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     "business revenue leaks",
     "AI employee",
     "workflow automation",
-    "ACCA qualified",
+    "enterprise finance background",
     "HireOnce",
   ],
   openGraph: {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "Core AI Solutions",
     title: "Revenue Recovery Audit — Find Exactly Where Your Business Is Losing Money",
     description:
-      "Stop losing revenue to missed calls, dead leads & manual admin. ACCA-qualified consultant shows you the exact £ your business is bleeding and how AI fixes it.",
+      "Stop losing revenue to missed calls, dead leads & manual admin. Enterprise-trained consultant shows you the exact £ your business is bleeding and how AI fixes it.",
   },
   twitter: {
     card: "summary_large_image",
@@ -60,11 +60,11 @@ export default function RootLayout({
               name: "Core AI Solutions",
               url: "https://coreaisolutions.co.uk",
               description:
-                "Revenue Recovery Audits for UK businesses. ACCA-qualified consultant finds exact £ amounts of revenue leaks, then deploys AI automation to fix them.",
+                "Revenue Recovery Audits for UK businesses. Enterprise-trained consultant finds exact £ amounts of revenue leaks, then deploys AI automation to fix them.",
               founder: {
                 "@type": "Person",
                 name: "Manny Amoah",
-                jobTitle: "ACCA-Qualified AI Automation Consultant",
+                jobTitle: "AI Automation Consultant",
               },
               serviceType: ["Revenue Recovery Audit", "AI Automation", "HireOnce AI Employee", "Workflow Automation"],
               areaServed: [

@@ -3,7 +3,7 @@ import { ScrollFade } from "@/components/ScrollFade";
 
 export const metadata = {
   title: "Revenue Recovery Audit — £297 | Get Exact £ Figures on Every Revenue Leak",
-  description: "60-90 min deep dive with ACCA-qualified consultant. Professional Revenue Recovery Report with exact £ figures on every leak. ROI projections included.",
+  description: "60-90 min deep dive with enterprise-trained consultant. Professional Revenue Recovery Report with exact £ figures on every leak. ROI projections included.",
 };
 
 export default function RevenueRecoveryPage() {
@@ -15,7 +15,7 @@ export default function RevenueRecoveryPage() {
           <div className="text-center">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm text-primary">
               <span>💰</span>
-              <span>ACCA-Grade Analysis • 48hr Report</span>
+              <span>Enterprise-Grade Analysis • 48hr Report</span>
             </div>
 
             <h1 className="font-bold text-5xl tracking-tight text-primary sm:text-6xl">
@@ -23,7 +23,7 @@ export default function RevenueRecoveryPage() {
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted sm:text-xl">
               Find out exactly how much money your business is losing and get a specific plan to recover it. 
-              ACCA-qualified analysis with exact £ figures.
+              Enterprise-grade analysis with exact £ figures.
             </p>
             
             <div className="mt-10">
@@ -47,7 +47,7 @@ export default function RevenueRecoveryPage() {
                   title: "60-90 Minute Deep Dive with Manny",
                   items: [
                     "Screen share walkthrough of your current processes",
-                    "Revenue leak identification using ACCA frameworks",
+                    "Revenue leak identification using enterprise finance frameworks",
                     "Operational cost analysis and efficiency mapping",
                     "AI implementation priority assessment",
                   ],
@@ -83,12 +83,12 @@ export default function RevenueRecoveryPage() {
         </section>
       </ScrollFade>
 
-      {/* The ACCA Differentiator */}
+      {/* The Enterprise Differentiator */}
       <ScrollFade>
         <section className="py-24 bg-white">
           <div className="mx-auto max-w-4xl px-4 text-center">
             <h2 className="font-bold text-3xl text-primary sm:text-4xl">
-              The ACCA Differentiator
+              The Enterprise Differentiator
             </h2>
             <p className="mt-6 text-lg text-muted">
               Most AI consultants show you cool demos. I show you the ROI first.
@@ -118,8 +118,8 @@ export default function RevenueRecoveryPage() {
             
             <div className="mt-12 rounded-2xl border border-yellow-200 bg-yellow-50 p-6">
               <p className="text-sm text-text">
-                <strong>Background:</strong> ACCA qualified, 15 years at Visa Europe and UK Cabinet Office. 
-                I&rsquo;ve seen the financial guts of major organisations. Now I help small businesses 
+                <strong>Background:</strong> Enterprise-trained, 15 years at Visa Europe and UK Cabinet Office.
+                I&rsquo;ve seen the financial guts of major organisations. Now I help small businesses
                 plug the same leaks that cost corporates millions.
               </p>
             </div>
@@ -188,7 +188,7 @@ export default function RevenueRecoveryPage() {
                 {
                   step: "2",
                   title: "Deep Dive Session",
-                  desc: "Screen share walkthrough of your processes. ACCA-grade analysis of costs and revenue leaks.",
+                  desc: "Screen share walkthrough of your processes. Enterprise-grade analysis of costs and revenue leaks.",
                 },
                 {
                   step: "3",

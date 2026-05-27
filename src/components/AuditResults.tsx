@@ -376,7 +376,7 @@ export default function AuditResults({ formData, score, scoreBand, onRestart }: 
               This Is the Teaser. The Full Audit Goes Deeper.
             </h3>
             <p className="text-muted mb-6 max-w-2xl mx-auto">
-              The <strong>C.O.R.E. Revenue Recovery Audit</strong> is a breach-by-breach analysis with ACCA-grade P&L figures
+              The <strong>C.O.R.E. Revenue Recovery Audit</strong> is a breach-by-breach analysis with enterprise-grade P&L figures
               attached to every leak we find — walked through with you on a call.
               It&apos;s normally <strong>£497</strong>, but we credit 100% toward your first month if you come on board.
             </p>
