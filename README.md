@@ -1,5 +1,7 @@
 # Core AI Solutions Website
 
+[![CI](https://github.com/CoreAIManny/coreai-website/actions/workflows/ci.yml/badge.svg)](https://github.com/CoreAIManny/coreai-website/actions/workflows/ci.yml)
+
 Full-stack business website for a UK AI automation consultancy. Live at [coreaisolutions.co.uk](https://coreaisolutions.co.uk).
 
 ## The Problem
